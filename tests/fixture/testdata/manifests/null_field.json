@@ -1,0 +1,1 @@
+{"schema":"minisign-manifest/v1","package":"contoh-app","version":null,"algorithm":"ed25519","keyid":"b8a497a4a04ba51156a0756c71c00c8014ceef335aab9c0ca5f5e7bd52647597","artifact":{"name":"binary.bin","size":512,"sha256":"44cbc60105077f4b05686668fc574d4fbeeb45ac1b14a575bff55d55f1e84642"}}

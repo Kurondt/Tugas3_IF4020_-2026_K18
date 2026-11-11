@@ -1,0 +1,1 @@
+{"schema":"minisign-trust/v1","keys":[{"keyid":"ce88799b86153c227be14d6dfb88e8fcdc33ab6c1fd68e951e18fbcfd78f6e87","algorithm":"ed25519","public_key_pem":"-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAo1Gmiz8+GcGRtmoHA98u1iFEHalHRoNY3uWT79yL35k=\n-----END PUBLIC KEY-----\n","packages":["contoh-app"]}]}

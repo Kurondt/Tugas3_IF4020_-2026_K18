@@ -1,0 +1,134 @@
+name: pipeline-consumer
+
+on:
+  workflow_dispatch:
+    inputs:
+      image:
+        description: "Norsign image reference including digest"
+        required: true
+        default: "ghcr.io/if4020-k18/norsign:1.0.0"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/pipeline-consumer.yml"
+      - "tests/consumer/**"
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  consumer-pipeline:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE: ${{ inputs.image || 'ghcr.io/if4020-k18/norsign:1.0.0' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare release materials
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist out ci
+          echo "release payload for norsign consumer pipeline" > dist/contoh-app.zip
+          echo "${{ secrets.CONSUMER_SIGNING_KEY }}" > /tmp/signing.key.pem
+          chmod 600 /tmp/signing.key.pem
+          trap 'rm -f /tmp/signing.key.pem' EXIT
+          test -s /tmp/signing.key.pem || (echo "CONSUMER_SIGNING_KEY secret is empty" && exit 1)
+
+      - name: Sign artifact (C01)
+        shell: bash
+        run: |
+          set -euo pipefail
+          trap 'rm -f /tmp/signing.key.pem' EXIT
+          docker pull --platform linux/amd64 "$IMAGE"
+          docker run --rm --network none \
+            --user "$(id -u):$(id -g)" \
+            -v "$PWD/dist:/input:ro" \
+            -v "$PWD/out:/output" \
+            -v "/tmp/signing.key.pem:/run/signing.key.pem:ro" \
+            "$IMAGE" sign --file /input/contoh-app.zip \
+            --package contoh-app --version 1.0.0 \
+            --key /run/signing.key.pem --out /output/release.json
+
+      - name: Verify artifact (C01)
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm --network none \
+            --user "$(id -u):$(id -g)" \
+            -v "$PWD/dist:/input:ro" \
+            -v "$PWD/out:/output:ro" \
+            -v "$PWD/ci/trust.json:/trust.json:ro" \
+            "$IMAGE" verify --file /input/contoh-app.zip \
+            --bundle /output/release.json --trust-store /trust.json \
+            --package contoh-app --version 1.0.0 --json | tee out/verification.json
+          grep '"status": *"OK"' out/verification.json
+          touch out/deployment-approved
+
+      - name: Deploy (simulated by marker file)
+        shell: bash
+        run: |
+          test -f out/deployment-approved || { echo "verification gate failed"; exit 1; }
+          echo "artifact deployed: $(cat dist/contoh-app.zip | sha256sum)"
+
+      - name: C02 - verify tampered artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p tmpdir
+          sed 's/release/tampered/' dist/contoh-app.zip > tmpdir/contoh-app.zip
+          set +e
+          docker run --rm --network none \
+            --user "$(id -u):$(id -g)" \
+            -v "$PWD/tmpdir:/input:ro" \
+            -v "$PWD/out:/output:ro" \
+            -v "$PWD/ci/trust.json:/trust.json:ro" \
+            "$IMAGE" verify --file /input/contoh-app.zip \
+            --bundle /output/release.json --trust-store /trust.json \
+            --package contoh-app --version 1.0.0 --json > tmpdir/tampered.json
+          code=$?
+          set -e
+          test "$code" -eq 1 || { echo "expected exit code 1, got $code"; exit 1; }
+          grep -v '"status": *"OK"' tmpdir/tampered.json
+          test ! -f tmpdir/deployment-approved
+
+      - name: C03 - verify with empty trust store
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo '{"schema":"minisign-trust/v1","keys":[]}' > tmpdir/empty-trust.json
+          set +e
+          docker run --rm --network none \
+            --user "$(id -u):$(id -g)" \
+            -v "$PWD/dist:/input:ro" \
+            -v "$PWD/out:/output:ro" \
+            -v "$PWD/tmpdir/empty-trust.json:/trust.json:ro" \
+            "$IMAGE" verify --file /input/contoh-app.zip \
+            --bundle /output/release.json --trust-store /trust.json \
+            --package contoh-app --version 1.0.0 --json > tmpdir/untrusted.json
+          code=$?
+          set -e
+          test "$code" -eq 1 || { echo "expected exit code 1, got $code"; exit 1; }
+
+      - name: C04 - verify with missing artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          set +e
+          docker run --rm --network none \
+            --user "$(id -u):$(id -g)" \
+            -v "$PWD/dist:/input:ro" \
+            -v "$PWD/out:/output:ro" \
+            -v "$PWD/ci/trust.json:/trust.json:ro" \
+            "$IMAGE" verify --file /input/missing.zip \
+            --bundle /output/release.json --trust-store /trust.json \
+            --package contoh-app --version 1.0.0 --json > tmpdir/input-error.json
+          code=$?
+          set -e
+          test "$code" -eq 2 || { echo "expected exit code 2, got $code"; exit 1; }
+
+      - name: C05 - runtime constraints (UID/GID, no TTY, no network)
+        shell: bash
+        run: |
+          docker run --rm --network none --user "$(id -u):$(id -g)" "$IMAGE" --version
