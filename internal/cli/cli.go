@@ -2,13 +2,16 @@ package cli
 
 import (
 	"encoding/json"
+	"errors"
 	"flag"
 	"fmt"
 	"io"
 	"os"
+	"strconv"
 	"strings"
 
 	sigcrypto "signer/internal/crypto"
+	"signer/internal/fileio"
 	"signer/internal/keys"
 	"signer/internal/manifest"
 	"signer/internal/signing"
@@ -28,6 +31,8 @@ Commands:
   keygen       Generate a key pair
   sign         Sign an artifact and write a bundle
   verify       Verify a bundle against an artifact and trust store
+  sbom sign    Sign a JSON SBOM bound to a release
+  sbom verify  Verify release, SBOM, and their binding
   trust add    Add a public key to the trust store
   trust list   List trusted keys
   trust remove Remove a trusted key by keyid
@@ -97,6 +102,8 @@ func Main(args []string, stdout io.Writer, stderr io.Writer) int {
 		return runSign(args[1:], stdout, stderr)
 	case "verify":
 		return runVerify(args[1:], stdout, stderr)
+	case "sbom":
+		return runSBOM(args[1:], stdout, stderr)
 	case "trust":
 		return runTrust(args[1:], stdout, stderr)
 	default:
@@ -111,8 +118,8 @@ func runKeygen(args []string, stdout io.Writer, stderr io.Writer) int {
 	fs.StringVar(&params.algorithm, "algorithm", "", "algorithm profile (rsa-pss-sha256, ecdsa-p256-sha256, ed25519)")
 	fs.StringVar(&params.out, "out", "", "output file name prefix")
 	fs.BoolVar(&params.force, "force", false, "overwrite existing key files")
-	if handleParse(fs, args, stderr) {
-		return 2
+	if code := handleParse(fs, args, stderr); code >= 0 {
+		return code
 	}
 	if missingParams(fs, stderr, map[string]string{
 		"--algorithm": params.algorithm,
@@ -142,8 +149,8 @@ func runSign(args []string, stdout io.Writer, stderr io.Writer) int {
 	fs.StringVar(&params.key, "key", "", "private key file (PKCS8 PEM)")
 	fs.StringVar(&params.out, "out", "", "output bundle file")
 	fs.BoolVar(&params.force, "force", false, "overwrite existing bundle file")
-	if handleParse(fs, args, stderr) {
-		return 2
+	if code := handleParse(fs, args, stderr); code >= 0 {
+		return code
 	}
 	if missingParams(fs, stderr, map[string]string{
 		"--file":    params.file,
@@ -172,8 +179,11 @@ func runVerify(args []string, stdout io.Writer, stderr io.Writer) int {
 	fs.StringVar(&params.pkg, "package", "", "expected package name")
 	fs.StringVar(&params.version, "version", "", "expected release version")
 	fs.BoolVar(&params.json, "json", false, "print the verification result as JSON")
-	if handleParse(fs, args, stderr) {
-		return 2
+	if code := handleParse(fs, args, stderr); code >= 0 {
+		if code == 2 && jsonRequested(args) {
+			writeResult(stdout, verifier.Result{Status: string(verifier.StatusInputError), Message: "invalid command parameters"})
+		}
+		return code
 	}
 	if missingParams(fs, stderr, map[string]string{
 		"--file":        params.file,
@@ -199,6 +209,9 @@ func runVerify(args []string, stdout io.Writer, stderr io.Writer) int {
 	})
 	if err != nil {
 		fmt.Fprintf(stderr, "verify: %v\n", err)
+		if params.json {
+			writeResult(stdout, verifier.Result{Status: string(verifier.StatusInputError), Message: err.Error()})
+		}
 		return 2
 	}
 	if params.json {
@@ -216,6 +229,9 @@ func runTrust(args []string, stdout io.Writer, stderr io.Writer) int {
 		return 2
 	}
 	switch args[0] {
+	case "--help", "-h":
+		fmt.Fprintln(stdout, "Usage: norsign trust <add|list|remove> --help")
+		return 0
 	case "add":
 		return runTrustAdd(args[1:], stdout, stderr)
 	case "list":
@@ -234,8 +250,8 @@ func runTrustAdd(args []string, stdout io.Writer, stderr io.Writer) int {
 	fs.StringVar(&params.key, "key", "", "public key file (SPKI PEM)")
 	fs.StringVar(&params.pkg, "package", "", "package name to allow")
 	fs.StringVar(&params.store, "store", "", "trust store file")
-	if handleParse(fs, args, stderr) {
-		return 2
+	if code := handleParse(fs, args, stderr); code >= 0 {
+		return code
 	}
 	if missingParams(fs, stderr, map[string]string{
 		"--key":     params.key,
@@ -246,6 +262,10 @@ func runTrustAdd(args []string, stdout io.Writer, stderr io.Writer) int {
 	}
 	if !manifest.ValidPackage(params.pkg) {
 		fmt.Fprintf(stderr, "trust add: package %q does not match the required pattern\n", params.pkg)
+		return 2
+	}
+	if err := fileio.RejectAliases(params.store, params.key); err != nil {
+		fmt.Fprintf(stderr, "trust add: %v\n", err)
 		return 2
 	}
 	publicKeyPEM, err := os.ReadFile(params.key)
@@ -283,8 +303,8 @@ func runTrustList(args []string, stdout io.Writer, stderr io.Writer) int {
 	fs := newFlagSet("trust list", stderr)
 	params := trustListParams{}
 	fs.StringVar(&params.store, "store", "", "trust store file")
-	if handleParse(fs, args, stderr) {
-		return 2
+	if code := handleParse(fs, args, stderr); code >= 0 {
+		return code
 	}
 	if missingParams(fs, stderr, map[string]string{"--store": params.store}) {
 		return 2
@@ -306,8 +326,8 @@ func runTrustRemove(args []string, stdout io.Writer, stderr io.Writer) int {
 	params := trustRemoveParams{}
 	fs.StringVar(&params.keyID, "keyid", "", "keyid fingerprint to remove")
 	fs.StringVar(&params.store, "store", "", "trust store file")
-	if handleParse(fs, args, stderr) {
-		return 2
+	if code := handleParse(fs, args, stderr); code >= 0 {
+		return code
 	}
 	if missingParams(fs, stderr, map[string]string{
 		"--keyid": params.keyID,
@@ -338,16 +358,37 @@ func newFlagSet(name string, stderr io.Writer) *flag.FlagSet {
 	return fs
 }
 
-func handleParse(fs *flag.FlagSet, args []string, stderr io.Writer) bool {
+// handleParse returns -1 when execution should continue.
+func handleParse(fs *flag.FlagSet, args []string, stderr io.Writer) int {
 	if err := fs.Parse(args); err != nil {
-		fmt.Fprintf(stderr, "%s: %v\n\nRun \"norsign %s --help\" for usage.\n", fs.Name(), err, fs.Name())
-		return true
+		if errors.Is(err, flag.ErrHelp) {
+			return 0
+		}
+		fmt.Fprintf(stderr, "%s: %v\n", fs.Name(), err)
+		return 2
 	}
 	if fs.NArg() > 0 {
 		fmt.Fprintf(stderr, "%s: unexpected argument %q\n", fs.Name(), fs.Arg(0))
-		return true
+		return 2
 	}
-	return false
+	return -1
+}
+
+func jsonRequested(args []string) bool {
+	enabled := false
+	for _, a := range args {
+		if a == "--json" || a == "-json" {
+			enabled = true
+			continue
+		}
+		for _, prefix := range []string{"--json=", "-json="} {
+			if strings.HasPrefix(a, prefix) {
+				value, err := strconv.ParseBool(strings.TrimPrefix(a, prefix))
+				enabled = err != nil || value
+			}
+		}
+	}
+	return enabled
 }
 
 func missingParams(fs *flag.FlagSet, stderr io.Writer, values map[string]string) bool {
