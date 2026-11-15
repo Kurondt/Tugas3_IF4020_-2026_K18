@@ -13,10 +13,10 @@ import (
 	"errors"
 	"fmt"
 	"os"
-	"path/filepath"
 
 	"signer/internal/contract"
 	sigcrypto "signer/internal/crypto"
+	"signer/internal/fileio"
 )
 
 const (
@@ -180,6 +180,9 @@ func decodeSinglePEM(data []byte) (*pem.Block, error) {
 	if !bytes.HasPrefix(trimmed, []byte("-----BEGIN ")) {
 		return nil, errors.New("invalid PEM header")
 	}
+	if bytes.Count(trimmed, []byte("-----BEGIN ")) != 1 || bytes.Count(trimmed, []byte("-----END ")) != 1 {
+		return nil, errors.New("expected exactly one PEM block")
+	}
 	block, rest := pem.Decode(trimmed)
 	if block == nil {
 		return nil, errors.New("failed to decode PEM block")
@@ -194,7 +197,7 @@ func decodeSinglePEM(data []byte) (*pem.Block, error) {
 }
 
 func ensureNotExists(path string) error {
-	_, err := os.Stat(path)
+	_, err := os.Lstat(path)
 	if err == nil {
 		return fmt.Errorf("file %q already exists (use --force to overwrite)", path)
 	}
@@ -235,29 +238,5 @@ func savePublicFileWithForce(path string, public crypto.PublicKey, force bool) e
 }
 
 func writeFile(path string, data []byte, perm os.FileMode, force bool) error {
-	dir := filepath.Dir(path)
-	if dir != "" && dir != "." {
-		if err := os.MkdirAll(dir, 0o755); err != nil {
-			return err
-		}
-	}
-	flags := os.O_WRONLY | os.O_CREATE
-	if force {
-		flags |= os.O_TRUNC
-	} else {
-		flags |= os.O_EXCL
-	}
-	f, err := os.OpenFile(path, flags, perm)
-	if err != nil {
-		return err
-	}
-	_, writeErr := f.Write(data)
-	closeErr := f.Close()
-	if writeErr != nil {
-		return writeErr
-	}
-	if closeErr != nil {
-		return closeErr
-	}
-	return os.Chmod(path, perm)
+	return fileio.WriteAtomic(path, data, perm, force)
 }

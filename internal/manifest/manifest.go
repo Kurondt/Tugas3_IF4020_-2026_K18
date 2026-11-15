@@ -1,6 +1,8 @@
 package manifest
 
 import (
+	"bytes"
+	"encoding/json"
 	"regexp"
 
 	"signer/internal/contract"
@@ -52,14 +54,61 @@ func ValidateAlgorithm(algorithm string) error {
 	return nil
 }
 
-func Build(pkg string, version string, algorithm sigcrypto.Algorithm, keyID, name string, size int64, sha256 string) (Manifest, error) {
-	return Manifest{}, ErrNotImplemented
+func Build(pkg, version string, algorithm sigcrypto.Algorithm, keyID, name string, size int64, sha256 string) (Manifest, error) {
+	m := Manifest{Schema, pkg, version, string(algorithm), keyID, Artifact{name, size, sha256}}
+	if err := ValidateAlgorithm(string(algorithm)); err != nil {
+		return Manifest{}, err
+	}
+	_, err := Canonical(m)
+	return m, err
 }
 
 func Canonical(m Manifest) ([]byte, error) {
-	return nil, ErrNotImplemented
+	if m.Schema != Schema || !ValidPackage(m.Package) || !ValidVersion(m.Version) ||
+		!namePattern.MatchString(m.Artifact.Name) || !hex64Pattern.MatchString(m.KeyID) ||
+		!hex64Pattern.MatchString(m.Artifact.SHA256) || m.Artifact.Size < 0 || m.Artifact.Size > maxInt {
+		return nil, ErrFormat
+	}
+	for _, c := range m.Algorithm {
+		if c < 0x20 || c > 0x7e {
+			return nil, ErrFormat
+		}
+	}
+	var out bytes.Buffer
+	encoder := json.NewEncoder(&out)
+	encoder.SetEscapeHTML(false)
+	err := encoder.Encode(m)
+	b := bytes.TrimSuffix(out.Bytes(), []byte("\n"))
+	if err != nil || len(b) > MaxSize {
+		return nil, ErrFormat
+	}
+	return b, nil
 }
 
 func Parse(data []byte) (Manifest, error) {
-	return Manifest{}, ErrNotImplemented
+	if len(data) > MaxSize {
+		return Manifest{}, ErrFormat
+	}
+	v, err := jsonx.Decode(data)
+	if err != nil {
+		return Manifest{}, err
+	}
+	o, err := jsonx.Object(v, manifestFields...)
+	if err != nil {
+		return Manifest{}, err
+	}
+	if _, err := jsonx.Object(o["artifact"], artifactFields...); err != nil {
+		return Manifest{}, err
+	}
+	var m Manifest
+	if err := jsonx.Into(o, &m); err != nil {
+		return Manifest{}, err
+	}
+	b, err := Canonical(m)
+	if err != nil || !bytes.Equal(b, data) {
+		return Manifest{}, ErrFormat
+	}
+	return m, nil
 }
+
+func ValidVersion(value string) bool { return versionPattern.MatchString(value) }
