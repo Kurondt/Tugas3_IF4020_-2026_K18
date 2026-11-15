@@ -115,7 +115,7 @@ docker run --rm --network none \
 
 | Release | Tag | Digest |
 |---|---|---|
-| 1.0.0 | `ghcr.io/kurondt/jarsign:1.0.0` | `sha256:TODO` |
+| 1.0.0 | `ghcr.io/kurondt/jarsign:1.0.0` | `sha256:9b3719f07978fc3cf43e92fb3b8e1cd8f34f2ba768992871ac2b7487ca26cc68` |
 
 ## CI/CD
 
