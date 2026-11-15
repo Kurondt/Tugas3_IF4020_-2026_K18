@@ -1,8 +1,8 @@
-{"Time":"2026-11-15T14:11:22.556241344+07:00","Action":"start","Package":"signer/cmd/norsign"}
-{"Time":"2026-11-15T14:11:22.557412346+07:00","Action":"start","Package":"signer/cmd/norsign-bench"}
+{"Time":"2026-11-15T14:11:22.556241344+07:00","Action":"start","Package":"signer/cmd/jarsign"}
+{"Time":"2026-11-15T14:11:22.557412346+07:00","Action":"start","Package":"signer/cmd/jarsign-bench"}
 {"Time":"2026-11-15T14:11:22.557568733+07:00","Action":"start","Package":"signer/internal/bundle"}
-{"Time":"2026-11-15T14:11:22.557633518+07:00","Action":"output","Package":"signer/cmd/norsign-bench","Output":"?   \tsigner/cmd/norsign-bench\t[no test files]\n"}
-{"Time":"2026-11-15T14:11:22.557944477+07:00","Action":"skip","Package":"signer/cmd/norsign-bench","Elapsed":0.001}
+{"Time":"2026-11-15T14:11:22.557633518+07:00","Action":"output","Package":"signer/cmd/jarsign-bench","Output":"?   \tsigner/cmd/jarsign-bench\t[no test files]\n"}
+{"Time":"2026-11-15T14:11:22.557944477+07:00","Action":"skip","Package":"signer/cmd/jarsign-bench","Elapsed":0.001}
 {"Time":"2026-11-15T14:11:22.558015322+07:00","Action":"start","Package":"signer/internal/cli"}
 {"Time":"2026-11-15T14:11:22.558027565+07:00","Action":"output","Package":"signer/internal/cli","Output":"?   \tsigner/internal/cli\t[no test files]\n"}
 {"Time":"2026-11-15T14:11:22.558037624+07:00","Action":"skip","Package":"signer/internal/cli","Elapsed":0}
@@ -18,10 +18,10 @@
 {"Time":"2026-11-15T14:11:22.558194353+07:00","Action":"skip","Package":"signer/internal/crypto","Elapsed":0}
 {"Time":"2026-11-15T14:11:22.558202998+07:00","Action":"skip","Package":"signer/internal/fileio","Elapsed":0}
 {"Time":"2026-11-15T14:11:22.5582191+07:00","Action":"start","Package":"signer/internal/jsonx"}
-{"Time":"2026-11-15T14:11:22.557006686+07:00","Action":"output","Package":"signer/cmd/norsign","Output":"?   \tsigner/cmd/norsign\t[no test files]\n"}
+{"Time":"2026-11-15T14:11:22.557006686+07:00","Action":"output","Package":"signer/cmd/jarsign","Output":"?   \tsigner/cmd/jarsign\t[no test files]\n"}
 {"Time":"2026-11-15T14:11:22.558239018+07:00","Action":"start","Package":"signer/internal/keys"}
 {"Time":"2026-11-15T14:11:22.55826627+07:00","Action":"output","Package":"signer/internal/keys","Output":"?   \tsigner/internal/keys\t[no test files]\n"}
-{"Time":"2026-11-15T14:11:22.558243856+07:00","Action":"skip","Package":"signer/cmd/norsign","Elapsed":0.016}
+{"Time":"2026-11-15T14:11:22.558243856+07:00","Action":"skip","Package":"signer/cmd/jarsign","Elapsed":0.016}
 {"Time":"2026-11-15T14:11:22.558272081+07:00","Action":"skip","Package":"signer/internal/keys","Elapsed":0}
 {"Time":"2026-11-15T14:11:22.558288891+07:00","Action":"start","Package":"signer/internal/manifest"}
 {"Time":"2026-11-15T14:11:22.558300193+07:00","Action":"output","Package":"signer/internal/manifest","Output":"?   \tsigner/internal/manifest\t[no test files]\n"}

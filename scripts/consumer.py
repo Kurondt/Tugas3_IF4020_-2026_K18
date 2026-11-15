@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exercise a digest-pinned image on a clean runner; never build/install norsign."""
+"""Exercise a digest-pinned image on a clean runner; never build/install jarsign."""
 import argparse
 import hashlib
 import json
@@ -17,7 +17,7 @@ def main():
     parser.add_argument('--profile', choices=['ed25519', 'ecdsa-p256-sha256', 'rsa-pss-sha256'], required=True)
     parser.add_argument('--out', default='consumer-results')
     args = parser.parse_args()
-    if not re.fullmatch(r'ghcr\.io/kurondt/norsign@sha256:[0-9a-f]{64}', args.image):
+    if not re.fullmatch(r'ghcr\.io/kurondt/jarsign@sha256:[0-9a-f]{64}', args.image):
         parser.error('--image must be pinned by sha256 digest')
     root = Path(args.out).resolve()
     if root.exists():
@@ -40,13 +40,13 @@ def main():
 
     c01 = root / 'C01'
     c01.mkdir()
-    payload = b'release payload for norsign consumer pipeline\n'
+    payload = b'release payload for jarsign consumer pipeline\n'
     artifact = c01 / 'contoh-app.zip'
     artifact.write_bytes(payload)
     secret = os.environ.pop('CONSUMER_SIGNING_KEY', '')
     if not secret.strip():
         raise RuntimeError('CONSUMER_SIGNING_KEY must contain the configured test private key')
-    fd, temporary = tempfile.mkstemp(prefix='norsign-signing-', suffix='.pem')
+    fd, temporary = tempfile.mkstemp(prefix='jarsign-signing-', suffix='.pem')
     try:
         with os.fdopen(fd, 'w') as file:
             file.write(secret)

@@ -1,8 +1,8 @@
-go build -trimpath -ldflags "-s -w -X signer/internal/cli.programVersion=1.0.0" -o bin/norsign ./cmd/norsign
+go build -trimpath -ldflags "-s -w -X signer/internal/cli.programVersion=1.0.0" -o bin/jarsign ./cmd/jarsign
 go vet ./...
 go test ./...
-?   	signer/cmd/norsign	[no test files]
-?   	signer/cmd/norsign-bench	[no test files]
+?   	signer/cmd/jarsign	[no test files]
+?   	signer/cmd/jarsign-bench	[no test files]
 ?   	signer/internal/bundle	[no test files]
 ?   	signer/internal/cli	[no test files]
 ?   	signer/internal/contract	[no test files]
@@ -26,8 +26,8 @@ ok  	signer/tests/signing	0.011s
 ok  	signer/tests/trust	0.012s
 ok  	signer/tests/verifier	0.073s
 go test -race ./...
-?   	signer/cmd/norsign	[no test files]
-?   	signer/cmd/norsign-bench	[no test files]
+?   	signer/cmd/jarsign	[no test files]
+?   	signer/cmd/jarsign-bench	[no test files]
 ?   	signer/internal/bundle	[no test files]
 ?   	signer/internal/cli	[no test files]
 ?   	signer/internal/contract	[no test files]

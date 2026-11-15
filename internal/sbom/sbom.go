@@ -16,7 +16,7 @@ import (
 	"signer/internal/verifier"
 )
 
-const Schema = "norsign-sbom/v1"
+const Schema = "jarsign-sbom/v1"
 const MaxSize = 16 * 1024 * 1024
 const StatusBindingMismatch = "SBOM_BINDING_MISMATCH"
 

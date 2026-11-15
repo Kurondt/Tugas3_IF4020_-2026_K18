@@ -6,9 +6,9 @@ COPY cmd ./cmd
 COPY internal ./internal
 RUN CGO_ENABLED=0 go build -trimpath \
     -ldflags "-s -w -X signer/internal/cli.programVersion=${PROGRAM_VERSION}" \
-    -o /out/norsign ./cmd/norsign
+    -o /out/jarsign ./cmd/jarsign
 
 FROM gcr.io/distroless/static-debian12:nonroot
-COPY --from=build /out/norsign /norsign
+COPY --from=build /out/jarsign /jarsign
 USER nonroot:nonroot
-ENTRYPOINT ["/norsign"]
+ENTRYPOINT ["/jarsign"]

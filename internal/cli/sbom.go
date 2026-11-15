@@ -11,11 +11,11 @@ import (
 
 func runSBOM(args []string, stdout, stderr io.Writer) int {
 	if len(args) == 0 {
-		fmt.Fprintln(stderr, "Usage: norsign sbom <sign|verify> --help")
+		fmt.Fprintln(stderr, "Usage: JARsign sbom <sign|verify> --help")
 		return 2
 	}
 	if args[0] == "--help" || args[0] == "-h" {
-		fmt.Fprintln(stdout, "Usage: norsign sbom <sign|verify> --help")
+		fmt.Fprintln(stdout, "Usage: JARsign sbom <sign|verify> --help")
 		return 0
 	}
 	if args[0] != "sign" && args[0] != "verify" {

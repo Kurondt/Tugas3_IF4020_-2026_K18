@@ -24,8 +24,8 @@ class ConsumerTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.temp = tempfile.TemporaryDirectory()
-        cls.binary = Path(cls.temp.name) / 'norsign'
-        REAL_RUN(['go', 'build', '-o', str(cls.binary), './cmd/norsign'], check=True)
+        cls.binary = Path(cls.temp.name) / 'jarsign'
+        REAL_RUN(['go', 'build', '-o', str(cls.binary), './cmd/jarsign'], check=True)
 
     @classmethod
     def tearDownClass(cls):
@@ -66,7 +66,7 @@ class ConsumerTests(unittest.TestCase):
                         self.assertTrue(all(not path.exists() for path in secret_paths))
                     return REAL_RUN([str(self.binary)] + args, **kwargs)
 
-                argv = ['consumer.py', '--image', 'ghcr.io/kurondt/norsign@sha256:' + 'a'*64,
+                argv = ['consumer.py', '--image', 'ghcr.io/kurondt/jarsign@sha256:' + 'a'*64,
                         '--profile', profile, '--out', str(output)]
                 with patch.object(sys, 'argv', argv), patch.dict(os.environ, {'CONSUMER_SIGNING_KEY': key_text}), patch.object(subprocess, 'run', docker), contextlib.redirect_stdout(io.StringIO()):
                     consumer.main()
@@ -79,7 +79,7 @@ class ConsumerTests(unittest.TestCase):
                 self.assertTrue(all(not path.exists() for path in secret_paths))
 
     def test_reject_tag_only_image(self):
-        with patch.object(sys, 'argv', ['consumer.py', '--image', 'ghcr.io/kurondt/norsign:1.0.0', '--profile', 'ed25519']), contextlib.redirect_stderr(io.StringIO()):
+        with patch.object(sys, 'argv', ['consumer.py', '--image', 'ghcr.io/kurondt/jarsign:1.0.0', '--profile', 'ed25519']), contextlib.redirect_stderr(io.StringIO()):
             with self.assertRaises(SystemExit) as caught:
                 consumer.main()
             self.assertEqual(caught.exception.code, 2)

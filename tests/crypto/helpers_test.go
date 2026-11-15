@@ -4,7 +4,7 @@ import "path/filepath"
 
 const testdataDir = "../fixture/testdata"
 
-const testMessage = "norsign unit test message"
+const testMessage = "jarsign unit test message"
 
 type profileFixture struct {
 	name string

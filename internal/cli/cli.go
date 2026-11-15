@@ -25,7 +25,7 @@ var programVersion = version
 
 const usageText = `
 Usage:
-  norsign <command> [parameters]
+  JARsign <command> [parameters]
 
 Commands:
   keygen       Generate a key pair
@@ -41,7 +41,7 @@ Global options:
   --help       Show this help
   --version    Show program version
 
-Run "norsign <command> --help" for command parameters.`
+Run "JARsign <command> --help" for command parameters.`
 
 type keygenParams struct {
 	algorithm string
@@ -92,7 +92,7 @@ func Main(args []string, stdout io.Writer, stderr io.Writer) int {
 		fmt.Fprintln(stdout, usageText)
 		return 0
 	case "--version":
-		fmt.Fprintf(stdout, "norsign version %s\n", programVersion)
+		fmt.Fprintf(stdout, "JARsign version %s\n", programVersion)
 		return 0
 	}
 	switch args[0] {
@@ -230,7 +230,7 @@ func runTrust(args []string, stdout io.Writer, stderr io.Writer) int {
 	}
 	switch args[0] {
 	case "--help", "-h":
-		fmt.Fprintln(stdout, "Usage: norsign trust <add|list|remove> --help")
+		fmt.Fprintln(stdout, "Usage: JARsign trust <add|list|remove> --help")
 		return 0
 	case "add":
 		return runTrustAdd(args[1:], stdout, stderr)

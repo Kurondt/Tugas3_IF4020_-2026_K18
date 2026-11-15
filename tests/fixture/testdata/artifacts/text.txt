@@ -1,2 +1,2 @@
-norsign release fixture
+jarsign release fixture
 line two

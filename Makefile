@@ -1,6 +1,6 @@
-PROGRAM  := norsign
+PROGRAM  := jarsign
 VERSION  := 1.0.0
-IMAGE    ?= ghcr.io/kurondt/norsign
+IMAGE    ?= ghcr.io/kurondt/jarsign
 
 GOFILES  := $(shell find cmd internal -name '*.go')
 
@@ -12,7 +12,7 @@ build: $(PROGRAM)
 
 $(PROGRAM): $(GOFILES)
 	@mkdir -p bin
-	go build -trimpath -ldflags "-s -w -X signer/internal/cli.programVersion=$(VERSION)" -o bin/$(PROGRAM) ./cmd/norsign
+	go build -trimpath -ldflags "-s -w -X signer/internal/cli.programVersion=$(VERSION)" -o bin/$(PROGRAM) ./cmd/jarsign
 
 test:
 	go test ./...
@@ -48,14 +48,14 @@ clean:
 .PHONY: benchmark interoperability docs check test-consumer
 
 benchmark: build
-	go run ./cmd/norsign-bench --binary bin/norsign --out tests/results/benchmark
+	go run ./cmd/jarsign-bench --binary bin/jarsign --out tests/results/benchmark
 
 interoperability:
 	go test -v ./tests/interoperability
 
 docs:
 	mkdir -p docs/site
-	pandoc --standalone --metadata title="norsign API" docs/API.md -o docs/site/index.html
+	pandoc --standalone --metadata title="jarsign API" docs/API.md -o docs/site/index.html
 
 test-consumer:
 	python3 -m unittest discover -s scripts -p 'test_*.py'

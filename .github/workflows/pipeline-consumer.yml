@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       image:
-        description: 'Public image pinned as ghcr.io/kurondt/norsign@sha256:<digest>'
+        description: 'Public image pinned as ghcr.io/kurondt/jarsign@sha256:<digest>'
         required: true
         type: string
 permissions:

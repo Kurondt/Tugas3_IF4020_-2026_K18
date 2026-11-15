@@ -82,7 +82,7 @@ func WriteAtomic(path string, data []byte, mode os.FileMode, force bool) error {
 	if err := os.MkdirAll(dir, 0755); err != nil {
 		return err
 	}
-	f, err := os.CreateTemp(dir, ".norsign-*")
+	f, err := os.CreateTemp(dir, ".jarsign-*")
 	if err != nil {
 		return err
 	}

@@ -12,8 +12,8 @@ import (
 )
 
 func TestBinaryContract(t *testing.T) {
-	binary := filepath.Join(t.TempDir(), "norsign")
-	if out, err := exec.Command("go", "build", "-o", binary, "../../cmd/norsign").CombinedOutput(); err != nil {
+	binary := filepath.Join(t.TempDir(), "jarsign")
+	if out, err := exec.Command("go", "build", "-o", binary, "../../cmd/jarsign").CombinedOutput(); err != nil {
 		t.Fatalf("build: %v %s", err, out)
 	}
 	run := func(args ...string) (string, string, int) {
@@ -81,7 +81,7 @@ func TestBinaryContract(t *testing.T) {
 	}
 	sbomPath, sbomBundle := filepath.Join(dir, "sbom.json"), filepath.Join(dir, "sbom-bundle.json")
 	digest := sha256.Sum256([]byte("hello"))
-	document := []byte(fmt.Sprintf(`{"schema":"norsign-sbom/v1","artifact":{"sha256":"%x"},"components":[]}`, digest))
+	document := []byte(fmt.Sprintf(`{"schema":"jarsign-sbom/v1","artifact":{"sha256":"%x"},"components":[]}`, digest))
 	if err := os.WriteFile(sbomPath, document, 0600); err != nil {
 		t.Fatal(err)
 	}

@@ -1,7 +1,7 @@
-# norsign
+# JARsign
 
 Software release signing and verification tool for IF4020 Kriptografi — Chapter 3
-(Penandatanganan dan Verifikasi Software Release). norsign signs release manifests
+(Penandatanganan dan Verifikasi Software Release). JARsign signs release manifests
 with RSA-PSS, ECDSA P-256, or Ed25519, stores manifest + signature in a JSON bundle,
 and verifies artifacts against a user-managed trust store. The flow adapts Sigstore
 Cosign blob signing.
@@ -11,7 +11,7 @@ Cosign blob signing.
 This repository currently contains the **shared skeleton** only:
 
 - data contracts: types, JSON tags, constants, patterns, and error values for every package,
-- command wiring: `internal/cli` + `cmd/norsign` are fully implemented and call the
+- command wiring: `internal/cli` + `cmd/JARsign` are fully implemented and call the
   package functions with the right parameters,
 - per-area test packages (`tests/crypto`, `tests/manifest`, `tests/bundle`, `tests/trust`,
   `tests/verifier`, `tests/integration`) and committed fixtures in `tests/fixture/testdata`.
@@ -20,7 +20,7 @@ Every implementation body is a stub that returns `contract.ErrNotImplemented`
 (defined in `internal/contract`). Running any command therefore ends cleanly:
 
 ```sh
-$ norsign verify ...
+$ JARsign verify ...
 verify: not implemented   # exit code 2
 ```
 
@@ -49,7 +49,7 @@ Guidance for the member implementing `internal/crypto`:
 ## Repository layout
 
 ```
-cmd/norsign        CLI entry point
+cmd/JARsign        CLI entry point
 internal/crypto    algorithm profiles, Signer/Verifier, key generation
 internal/keys      PEM PKCS8/SPKI file IO, fingerprint/keyid
 internal/jsonx     strict JSON decoding (duplicates, types, exact fields)
@@ -73,7 +73,7 @@ docs/CONTRACTS.md  module contracts and task ownership
 ## Build and test
 
 ```sh
-make build          # bin/norsign
+make build          # bin/JARsign
 make test           # go test ./... — fails with "not implemented" until stubs are filled in
 make test-race
 make docker-build   # local image build
@@ -82,16 +82,16 @@ make docker-build   # local image build
 ## CLI usage
 
 ```sh
-norsign keygen --algorithm ed25519 --out keys/publisher
-norsign trust add --key keys/publisher.pub.pem --package contoh-app --store trust.json
-norsign trust list --store trust.json
-norsign trust remove --keyid <fingerprint> --store trust.json
-norsign sign --file contoh-app.zip --package contoh-app --version 1.0.0 \
+JARsign keygen --algorithm ed25519 --out keys/publisher
+JARsign trust add --key keys/publisher.pub.pem --package contoh-app --store trust.json
+JARsign trust list --store trust.json
+JARsign trust remove --keyid <fingerprint> --store trust.json
+JARsign sign --file contoh-app.zip --package contoh-app --version 1.0.0 \
   --key keys/publisher.key.pem --out release.json
-norsign verify --file contoh-app.zip --bundle release.json --trust-store trust.json \
+JARsign verify --file contoh-app.zip --bundle release.json --trust-store trust.json \
   --package contoh-app --version 1.0.0 --json
-norsign --help
-norsign --version
+JARsign --help
+JARsign --version
 ```
 
 `verify --json` prints one JSON object (`valid`, `status`, `message`, `algorithm`,
@@ -102,20 +102,20 @@ explicit option for overwriting existing key or bundle files.
 ## Container usage
 
 ```sh
-docker pull ghcr.io/kurondt/norsign:1.0.0   # or pin by digest, see below
+docker pull ghcr.io/kurondt/jarsign:1.0.0   # or pin by digest, see below
 docker run --rm --network none \
   --user "$(id -u):$(id -g)" \
   -v "$PWD/dist:/input:ro" \
   -v "$PWD/out:/output" \
   -v "$PWD/ci/trust.json:/trust.json:ro" \
-  ghcr.io/kurondt/norsign:1.0.0 \
+  ghcr.io/kurondt/jarsign:1.0.0 \
   verify --file /input/contoh-app.zip --bundle /output/release.json \
   --trust-store /trust.json --package contoh-app --version 1.0.0 --json
 ```
 
 | Release | Tag | Digest |
 |---|---|---|
-| 1.0.0 | `ghcr.io/kurondt/norsign:1.0.0` | `sha256:TODO` |
+| 1.0.0 | `ghcr.io/kurondt/jarsign:1.0.0` | `sha256:TODO` |
 
 ## CI/CD
 

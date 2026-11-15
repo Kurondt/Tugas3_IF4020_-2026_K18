@@ -29,8 +29,8 @@
     "public API documentation hosting"
   ],
   "source_sha256": {
-    "cmd/norsign/main.go": "8f252991b0857b7701baf2f0f265f84303029af17fe35f28bc618819f4bcffd0",
-    "cmd/norsign-bench/main.go": "c05d6cb8e4282da58a54ae42485b2290b9d566c9cdadb585344998924f73ace6",
+    "cmd/jarsign/main.go": "8f252991b0857b7701baf2f0f265f84303029af17fe35f28bc618819f4bcffd0",
+    "cmd/jarsign-bench/main.go": "c05d6cb8e4282da58a54ae42485b2290b9d566c9cdadb585344998924f73ace6",
     "internal/bundle/bundle.go": "04858188b61466ec2743dc7b8bedd86a78fbd0ee8f808c8ac20222979ebac09c",
     "internal/cli/cli.go": "517a801b958c4b7e06951f2c7822c3306758f524c9e447ed36505b6c00635a01",
     "internal/cli/sbom.go": "f328a9b9f32dfce25abb7002d5d52e0f74a68dbb16261a4018b6aa3f67a13bde",

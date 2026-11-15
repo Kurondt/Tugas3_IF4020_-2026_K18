@@ -1,4 +1,4 @@
-// norsign-bench records reproducible assignment metrics outside the production CLI.
+// jarsign-bench records reproducible assignment metrics outside the production CLI.
 package main
 
 import (
@@ -60,7 +60,7 @@ func main() {
 }
 func run() error {
 	out := flag.String("out", "tests/results/benchmark", "result directory")
-	binary := flag.String("binary", "bin/norsign", "compiled production executable")
+	binary := flag.String("binary", "bin/jarsign", "compiled production executable")
 	flag.Parse()
 	absolute, err := filepath.Abs(*binary)
 	if err != nil {
@@ -72,7 +72,7 @@ func run() error {
 	if err := os.MkdirAll(*out, 0755); err != nil {
 		return err
 	}
-	work, err := os.MkdirTemp("", "norsign-benchmark-*")
+	work, err := os.MkdirTemp("", "jarsign-benchmark-*")
 	if err != nil {
 		return err
 	}

@@ -30,7 +30,7 @@ func TestSBOMAllProfiles(t *testing.T) {
 			payload := []byte("release")
 			write(artifact, payload)
 			hash := sha256.Sum256(payload)
-			doc := []byte(fmt.Sprintf(`{"schema":"norsign-sbom/v1","artifact":{"sha256":"%x"},"components":[{"name":"norsign","version":"1.0.0"}]}`, hash))
+			doc := []byte(fmt.Sprintf(`{"schema":"jarsign-sbom/v1","artifact":{"sha256":"%x"},"components":[{"name":"jarsign","version":"1.0.0"}]}`, hash))
 			write(inventory, doc)
 			if _, err := signing.SignFile(artifact, "contoh-app", "1.0.0", keyPath, rb, false); err != nil {
 				t.Fatal(err)
@@ -67,7 +67,7 @@ func TestSBOMAllProfiles(t *testing.T) {
 	}
 }
 func TestInvalidSBOM(t *testing.T) {
-	for _, s := range []string{`{}`, `{"schema":"norsign-sbom/v1","artifact":{"sha256":"bad"},"components":[]}`, `{"schema":"norsign-sbom/v1","artifact":{"sha256":"` + fmt.Sprintf("%064d", 0) + `"},"components":[{"name":"","version":"1"}]}`, `{"schema":"norsign-sbom/v1","artifact":{"sha256":"` + fmt.Sprintf("%064d", 0) + `"},"components":null}`} {
+	for _, s := range []string{`{}`, `{"schema":"jarsign-sbom/v1","artifact":{"sha256":"bad"},"components":[]}`, `{"schema":"jarsign-sbom/v1","artifact":{"sha256":"` + fmt.Sprintf("%064d", 0) + `"},"components":[{"name":"","version":"1"}]}`, `{"schema":"jarsign-sbom/v1","artifact":{"sha256":"` + fmt.Sprintf("%064d", 0) + `"},"components":null}`} {
 		if _, err := sbom.Parse([]byte(s)); err == nil {
 			t.Fatalf("accepted %s", s)
 		}
