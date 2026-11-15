@@ -39,7 +39,6 @@ jobs:
           echo "release payload for norsign consumer pipeline" > dist/contoh-app.zip
           echo "${{ secrets.CONSUMER_SIGNING_KEY }}" > /tmp/signing.key.pem
           chmod 600 /tmp/signing.key.pem
-          trap 'rm -f /tmp/signing.key.pem' EXIT
           test -s /tmp/signing.key.pem || (echo "CONSUMER_SIGNING_KEY secret is empty" && exit 1)
 
       - name: Sign artifact (C01)
