@@ -6,7 +6,7 @@ on:
       image:
         description: "Norsign image reference including digest"
         required: true
-        default: "ghcr.io/if4020-k18/norsign:1.0.0"
+        default: "ghcr.io/kurondt/norsign:1.0.0"
   push:
     branches: [main]
     paths:
@@ -21,7 +21,7 @@ jobs:
   consumer-pipeline:
     runs-on: ubuntu-latest
     env:
-      IMAGE: ${{ inputs.image || 'ghcr.io/if4020-k18/norsign:1.0.0' }}
+      IMAGE: ${{ inputs.image || 'ghcr.io/kurondt/norsign:1.0.0' }}
     steps:
       - uses: actions/checkout@v4
 

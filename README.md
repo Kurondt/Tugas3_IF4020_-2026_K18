@@ -102,29 +102,33 @@ explicit option for overwriting existing key or bundle files.
 ## Container usage
 
 ```sh
-docker pull ghcr.io/if4020-k18/norsign:1.0.0   # or pin by digest, see below
+docker pull ghcr.io/kurondt/norsign:1.0.0   # or pin by digest, see below
 docker run --rm --network none \
   --user "$(id -u):$(id -g)" \
   -v "$PWD/dist:/input:ro" \
   -v "$PWD/out:/output" \
   -v "$PWD/ci/trust.json:/trust.json:ro" \
-  ghcr.io/if4020-k18/norsign:1.0.0 \
+  ghcr.io/kurondt/norsign:1.0.0 \
   verify --file /input/contoh-app.zip --bundle /output/release.json \
   --trust-store /trust.json --package contoh-app --version 1.0.0 --json
 ```
 
 | Release | Tag | Digest |
 |---|---|---|
-| 1.0.0 | `ghcr.io/if4020-k18/norsign:1.0.0` | `sha256:TODO` |
+| 1.0.0 | `ghcr.io/kurondt/norsign:1.0.0` | `sha256:TODO` |
 
 ## CI/CD
 
 - `.github/workflows/release-image.yml` — builds and pushes the image on `v*` tags,
   records the digest, and smoke-tests it with `--network none`.
 - `.github/workflows/pipeline-consumer.yml` — the consumer pipeline (spec Tabel 2.14):
-  prepare → sign with a key from CI secret (`CONSUMER_SIGNING_KEY`, content =
-  `ci/keys/consumer.key.pem`) → verify `--json` against `ci/trust.json` → simulated
-  deployment marker → negative scenarios C02–C05 that must keep failing as specified.
+  prepare → sign with a key from CI secret (`CONSUMER_SIGNING_KEY`) → verify `--json`
+  against `ci/trust.json` → simulated deployment marker → negative scenarios C02–C05
+  that must keep failing as specified.
+- `ci/keys/consumer.key.pem` is **not committed** (see `.gitignore`): per the spec the
+  pipeline private key lives in the CI secret mechanism. Put its content into the
+  `CONSUMER_SIGNING_KEY` repository secret; the matching public key and trust store
+  (`ci/keys/consumer.pub.pem`, `ci/trust.json`) are committed.
 
 ## Testing
 
