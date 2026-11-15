@@ -1,0 +1,12 @@
+.git
+.github
+tests
+ci
+docs
+scripts
+bin
+Specifications.pdf
+**/*.pem
+**/*.key
+**/.env*
+coverage.out

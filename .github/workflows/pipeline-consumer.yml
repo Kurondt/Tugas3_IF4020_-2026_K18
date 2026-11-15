@@ -1,139 +1,38 @@
 name: pipeline-consumer
-
 on:
   workflow_dispatch:
     inputs:
       image:
-        description: "Norsign image reference including digest"
+        description: 'Public image pinned as ghcr.io/kurondt/norsign@sha256:<digest>'
         required: true
-        default: "ghcr.io/kurondt/norsign:1.0.0"
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/pipeline-consumer.yml"
-      - "tests/consumer/**"
-
+        type: string
 permissions:
   contents: read
-  packages: read
-
 jobs:
-  consumer-pipeline:
+  consumer:
     runs-on: ubuntu-latest
-    env:
-      IMAGE: ${{ inputs.image || 'ghcr.io/kurondt/norsign:1.0.0' }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - profile: ed25519
+            secret: CONSUMER_SIGNING_KEY_ED25519
+          - profile: ecdsa-p256-sha256
+            secret: CONSUMER_SIGNING_KEY_ECDSA_P256
+          - profile: rsa-pss-sha256
+            secret: CONSUMER_SIGNING_KEY_RSA_PSS
     steps:
       - uses: actions/checkout@v4
-
-      - uses: docker/login-action@v3
+      - name: C01-C05 using the published image
+        env:
+          IMAGE: ${{ inputs.image }}
+          PROFILE: ${{ matrix.profile }}
+          CONSUMER_SIGNING_KEY: ${{ secrets[matrix.secret] }}
+        run: python3 scripts/consumer.py --image "$IMAGE" --profile "$PROFILE" --out consumer-results
+      - name: Preserve sanitized evidence
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Prepare release materials
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p dist out ci
-          echo "release payload for norsign consumer pipeline" > dist/contoh-app.zip
-          echo "${{ secrets.CONSUMER_SIGNING_KEY }}" > /tmp/signing.key.pem
-          chmod 600 /tmp/signing.key.pem
-          test -s /tmp/signing.key.pem || (echo "CONSUMER_SIGNING_KEY secret is empty" && exit 1)
-
-      - name: Sign artifact (C01)
-        shell: bash
-        run: |
-          set -euo pipefail
-          trap 'rm -f /tmp/signing.key.pem' EXIT
-          docker pull --platform linux/amd64 "$IMAGE"
-          docker run --rm --network none \
-            --user "$(id -u):$(id -g)" \
-            -v "$PWD/dist:/input:ro" \
-            -v "$PWD/out:/output" \
-            -v "/tmp/signing.key.pem:/run/signing.key.pem:ro" \
-            "$IMAGE" sign --file /input/contoh-app.zip \
-            --package contoh-app --version 1.0.0 \
-            --key /run/signing.key.pem --out /output/release.json
-
-      - name: Verify artifact (C01)
-        shell: bash
-        run: |
-          set -euo pipefail
-          docker run --rm --network none \
-            --user "$(id -u):$(id -g)" \
-            -v "$PWD/dist:/input:ro" \
-            -v "$PWD/out:/output:ro" \
-            -v "$PWD/ci/trust.json:/trust.json:ro" \
-            "$IMAGE" verify --file /input/contoh-app.zip \
-            --bundle /output/release.json --trust-store /trust.json \
-            --package contoh-app --version 1.0.0 --json | tee out/verification.json
-          grep '"status": *"OK"' out/verification.json
-          touch out/deployment-approved
-
-      - name: Deploy (simulated by marker file)
-        shell: bash
-        run: |
-          test -f out/deployment-approved || { echo "verification gate failed"; exit 1; }
-          echo "artifact deployed: $(cat dist/contoh-app.zip | sha256sum)"
-
-      - name: C02 - verify tampered artifact
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p tmpdir
-          sed 's/release/tampered/' dist/contoh-app.zip > tmpdir/contoh-app.zip
-          set +e
-          docker run --rm --network none \
-            --user "$(id -u):$(id -g)" \
-            -v "$PWD/tmpdir:/input:ro" \
-            -v "$PWD/out:/output:ro" \
-            -v "$PWD/ci/trust.json:/trust.json:ro" \
-            "$IMAGE" verify --file /input/contoh-app.zip \
-            --bundle /output/release.json --trust-store /trust.json \
-            --package contoh-app --version 1.0.0 --json > tmpdir/tampered.json
-          code=$?
-          set -e
-          test "$code" -eq 1 || { echo "expected exit code 1, got $code"; exit 1; }
-          grep -v '"status": *"OK"' tmpdir/tampered.json
-          test ! -f tmpdir/deployment-approved
-
-      - name: C03 - verify with empty trust store
-        shell: bash
-        run: |
-          set -euo pipefail
-          echo '{"schema":"minisign-trust/v1","keys":[]}' > tmpdir/empty-trust.json
-          set +e
-          docker run --rm --network none \
-            --user "$(id -u):$(id -g)" \
-            -v "$PWD/dist:/input:ro" \
-            -v "$PWD/out:/output:ro" \
-            -v "$PWD/tmpdir/empty-trust.json:/trust.json:ro" \
-            "$IMAGE" verify --file /input/contoh-app.zip \
-            --bundle /output/release.json --trust-store /trust.json \
-            --package contoh-app --version 1.0.0 --json > tmpdir/untrusted.json
-          code=$?
-          set -e
-          test "$code" -eq 1 || { echo "expected exit code 1, got $code"; exit 1; }
-
-      - name: C04 - verify with missing artifact
-        shell: bash
-        run: |
-          set -euo pipefail
-          set +e
-          docker run --rm --network none \
-            --user "$(id -u):$(id -g)" \
-            -v "$PWD/dist:/input:ro" \
-            -v "$PWD/out:/output:ro" \
-            -v "$PWD/ci/trust.json:/trust.json:ro" \
-            "$IMAGE" verify --file /input/missing.zip \
-            --bundle /output/release.json --trust-store /trust.json \
-            --package contoh-app --version 1.0.0 --json > tmpdir/input-error.json
-          code=$?
-          set -e
-          test "$code" -eq 2 || { echo "expected exit code 2, got $code"; exit 1; }
-
-      - name: C05 - runtime constraints (UID/GID, no TTY, no network)
-        shell: bash
-        run: |
-          docker run --rm --network none --user "$(id -u):$(id -g)" "$IMAGE" --version
+          name: consumer-${{ matrix.profile }}
+          path: consumer-results
+          if-no-files-found: warn

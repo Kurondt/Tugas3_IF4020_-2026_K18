@@ -1,3 +1,7 @@
 bin/
 coverage.out
+
+docs/site/
+consumer-results/
+__pycache__/
 ci/keys/consumer.key.pem

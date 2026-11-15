@@ -11,6 +11,7 @@ all: build
 build: $(PROGRAM)
 
 $(PROGRAM): $(GOFILES)
+	@mkdir -p bin
 	go build -trimpath -ldflags "-s -w -X signer/internal/cli.programVersion=$(VERSION)" -o bin/$(PROGRAM) ./cmd/norsign
 
 test:
@@ -43,3 +44,20 @@ docker-run:
 
 clean:
 	rm -rf bin coverage.out
+
+.PHONY: benchmark interoperability docs check test-consumer
+
+benchmark: build
+	go run ./cmd/norsign-bench --binary bin/norsign --out tests/results/benchmark
+
+interoperability:
+	go test -v ./tests/interoperability
+
+docs:
+	mkdir -p docs/site
+	pandoc --standalone --metadata title="norsign API" docs/API.md -o docs/site/index.html
+
+test-consumer:
+	python3 -m unittest discover -s scripts -p 'test_*.py'
+
+check: fmt-check vet test test-race test-consumer
