@@ -1,6 +1,7 @@
 package crypto
 
 import (
+	"bytes"
 	"crypto"
 	"crypto/ecdsa"
 	"crypto/ed25519"
@@ -196,8 +197,13 @@ func PrivateAlgorithm(private crypto.PrivateKey) (Algorithm, error) {
 		if _, err := PublicAlgorithm(&k.PublicKey); err != nil {
 			return "", err
 		}
-		if k.D == nil || len(k.Primes) < 2 {
+		if k.D == nil || k.D.Sign() <= 0 || len(k.Primes) < 2 {
 			return "", errors.New("invalid RSA private key parameters")
+		}
+		for _, p := range k.Primes {
+			if p == nil || p.Sign() <= 0 {
+				return "", errors.New("invalid RSA prime")
+			}
 		}
 		if err := k.Validate(); err != nil {
 			return "", err
@@ -210,10 +216,20 @@ func PrivateAlgorithm(private crypto.PrivateKey) (Algorithm, error) {
 		if _, err := PublicAlgorithm(&k.PublicKey); err != nil {
 			return "", err
 		}
+		if k.D == nil || k.D.Sign() <= 0 || k.D.Cmp(elliptic.P256().Params().N) >= 0 {
+			return "", errors.New("invalid ECDSA scalar")
+		}
+		x, y := elliptic.P256().ScalarBaseMult(k.D.Bytes())
+		if x.Cmp(k.X) != 0 || y.Cmp(k.Y) != 0 {
+			return "", errors.New("ECDSA public and private key disagree")
+		}
 		return ECDSAP256, nil
 	case ed25519.PrivateKey:
 		if len(k) != ed25519.PrivateKeySize {
 			return "", errors.New("invalid Ed25519 private key length")
+		}
+		if !bytes.Equal(k, ed25519.NewKeyFromSeed(k[:ed25519.SeedSize])) {
+			return "", errors.New("inconsistent Ed25519 private key")
 		}
 		return Ed25519, nil
 	default:
@@ -227,6 +243,9 @@ func PublicAlgorithm(public crypto.PublicKey) (Algorithm, error) {
 		if k == nil || k.N == nil {
 			return "", errors.New("nil RSA public key")
 		}
+		if k.N.Sign() <= 0 || k.N.Bit(0) == 0 {
+			return "", errors.New("invalid RSA modulus")
+		}
 		if k.N.BitLen() != rsaKeyBits {
 			return "", fmt.Errorf("RSA key modulus must be %d bits, got %d", rsaKeyBits, k.N.BitLen())
 		}
@@ -237,6 +256,9 @@ func PublicAlgorithm(public crypto.PublicKey) (Algorithm, error) {
 	case *ecdsa.PublicKey:
 		if k == nil || k.Curve != elliptic.P256() || k.X == nil || k.Y == nil {
 			return "", errors.New("ECDSA public key must use P-256 curve")
+		}
+		if !k.Curve.IsOnCurve(k.X, k.Y) {
+			return "", errors.New("ECDSA point is not on curve")
 		}
 		return ECDSAP256, nil
 	case ed25519.PublicKey:
