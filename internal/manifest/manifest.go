@@ -52,7 +52,7 @@ func ValidateAlgorithm(algorithm string) error {
 	return nil
 }
 
-func Build(pkg, version, algorithm, keyID, name string, size int64, sha256 string) (Manifest, error) {
+func Build(pkg string, version string, algorithm sigcrypto.Algorithm, keyID, name string, size int64, sha256 string) (Manifest, error) {
 	return Manifest{}, ErrNotImplemented
 }
 

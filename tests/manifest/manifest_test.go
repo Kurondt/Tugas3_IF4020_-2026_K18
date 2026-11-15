@@ -6,6 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
+	sigcrypto "signer/internal/crypto"
 	"signer/internal/manifest"
 )
 
@@ -93,7 +94,7 @@ func TestBuildRejectsInvalidValues(t *testing.T) {
 	}
 	for _, testCase := range cases {
 		t.Run(testCase.name, func(t *testing.T) {
-			_, err := manifest.Build(testCase.pkg, testCase.version, testCase.algorithm, testCase.keyID, testCase.artifact, testCase.size, testCase.sha256)
+			_, err := manifest.Build(testCase.pkg, testCase.version, sigcrypto.Algorithm(testCase.algorithm), testCase.keyID, testCase.artifact, testCase.size, testCase.sha256)
 			if err == nil {
 				t.Fatal("expected build to fail")
 			}
