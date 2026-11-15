@@ -1,6 +1,6 @@
 PROGRAM  := norsign
 VERSION  := 1.0.0
-IMAGE    ?= ghcr.io/if4020-k18/norsign
+IMAGE    ?= ghcr.io/kurondt/norsign
 
 GOFILES  := $(shell find cmd internal -name '*.go')
 
