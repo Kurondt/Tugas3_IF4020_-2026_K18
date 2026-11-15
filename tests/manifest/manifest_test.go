@@ -84,13 +84,13 @@ func TestBuildRejectsInvalidValues(t *testing.T) {
 		size      int64
 		sha256    string
 	}{
-		{"bad package", "Contoh-App", testVersion, "ed25519", keyID, "a.bin", 1, "00"},
-		{"bad version", mainPackage, "-bad", "ed25519", keyID, "a.bin", 1, "00"},
-		{"bad algorithm", mainPackage, testVersion, "dsa-sha1", keyID, "a.bin", 1, "00"},
-		{"bad keyid", mainPackage, testVersion, "ed25519", "abc", "a.bin", 1, "00"},
-		{"bad name", mainPackage, testVersion, "ed25519", keyID, "dir/a.bin", 1, "00"},
-		{"bad size", mainPackage, testVersion, "ed25519", keyID, "a.bin", -1, "00"},
-		{"oversize", mainPackage, testVersion, "ed25519", keyID, "a.bin", 9007199254740992, "00"},
+		{"bad package", "Contoh-App", testVersion, "ed25519", keyID, "a.bin", 1, "0000000000000000000000000000000000000000000000000000000000000000"},
+		{"bad version", mainPackage, "-bad", "ed25519", keyID, "a.bin", 1, "0000000000000000000000000000000000000000000000000000000000000000"},
+		{"bad algorithm", mainPackage, testVersion, "dsa-sha1", keyID, "a.bin", 1, "0000000000000000000000000000000000000000000000000000000000000000"},
+		{"bad keyid", mainPackage, testVersion, "ed25519", "abc", "a.bin", 1, "0000000000000000000000000000000000000000000000000000000000000000"},
+		{"bad name", mainPackage, testVersion, "ed25519", keyID, "dir/a.bin", 1, "0000000000000000000000000000000000000000000000000000000000000000"},
+		{"bad size", mainPackage, testVersion, "ed25519", keyID, "a.bin", -1, "0000000000000000000000000000000000000000000000000000000000000000"},
+		{"oversize", mainPackage, testVersion, "ed25519", keyID, "a.bin", 9007199254740992, "0000000000000000000000000000000000000000000000000000000000000000"},
 	}
 	for _, testCase := range cases {
 		t.Run(testCase.name, func(t *testing.T) {
@@ -142,5 +142,37 @@ func TestManifestSizeLimit(t *testing.T) {
 	exactLimit := bytes.Repeat([]byte(" "), manifest.MaxSize)
 	if _, err := manifest.Parse(exactLimit); err == nil {
 		t.Fatal("expected non-canonical manifest at size limit to fail with format error, not size error")
+	}
+}
+
+func TestBuildValidBoundaryValues(t *testing.T) {
+	hash := "0000000000000000000000000000000000000000000000000000000000000000"
+	for _, size := range []int64{0, 9007199254740991} {
+		m, err := manifest.Build(mainPackage, testVersion, sigcrypto.Ed25519, testKeyID, "empty.bin", size, hash)
+		if err != nil {
+			t.Fatal(err)
+		}
+		canonical, err := manifest.Canonical(m)
+		if err != nil {
+			t.Fatal(err)
+		}
+		if _, err := manifest.Parse(canonical); err != nil {
+			t.Fatal(err)
+		}
+	}
+	if _, err := manifest.Build(mainPackage, testVersion, sigcrypto.Ed25519, testKeyID, "empty.bin", 0, "00"); err == nil {
+		t.Fatal("accepted invalid SHA-256")
+	}
+}
+func TestUnknownAlgorithmStringsRemainFormatValid(t *testing.T) {
+	original, err := os.ReadFile(fixturePath("manifests", "valid.json"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, name := range []string{"", "unknown profile", "unknown<profile>"} {
+		variant := bytes.Replace(original, []byte(`"algorithm":"ed25519"`), []byte(`"algorithm":"`+name+`"`), 1)
+		if _, err := manifest.Parse(variant); err != nil {
+			t.Fatalf("unknown profile %q rejected at format stage: %v", name, err)
+		}
 	}
 }

@@ -1,0 +1,386 @@
+[
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 0,
+    "metric": "keygen",
+    "samples": 5,
+    "median_ns": 214455992,
+    "p95_ns": 630146528
+  },
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 1024,
+    "metric": "artifact_sha256",
+    "samples": 30,
+    "median_ns": 711.5,
+    "p95_ns": 971
+  },
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 1024,
+    "metric": "manifest_sign",
+    "samples": 30,
+    "median_ns": 3083477,
+    "p95_ns": 3572825
+  },
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 1024,
+    "metric": "manifest_verify",
+    "samples": 30,
+    "median_ns": 133624.5,
+    "p95_ns": 170714
+  },
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 1024,
+    "metric": "cli_sign",
+    "samples": 30,
+    "median_ns": 8678870,
+    "p95_ns": 9751772
+  },
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 1024,
+    "metric": "cli_verify",
+    "samples": 30,
+    "median_ns": 5039592,
+    "p95_ns": 5763717
+  },
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 1048576,
+    "metric": "artifact_sha256",
+    "samples": 30,
+    "median_ns": 589870.5,
+    "p95_ns": 679190
+  },
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 1048576,
+    "metric": "manifest_sign",
+    "samples": 30,
+    "median_ns": 3053414.5,
+    "p95_ns": 3819775
+  },
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 1048576,
+    "metric": "manifest_verify",
+    "samples": 30,
+    "median_ns": 144053.5,
+    "p95_ns": 226911
+  },
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 1048576,
+    "metric": "cli_sign",
+    "samples": 30,
+    "median_ns": 9833701,
+    "p95_ns": 10713550
+  },
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 1048576,
+    "metric": "cli_verify",
+    "samples": 30,
+    "median_ns": 6027467.5,
+    "p95_ns": 6744100
+  },
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 16777216,
+    "metric": "artifact_sha256",
+    "samples": 30,
+    "median_ns": 9402800.5,
+    "p95_ns": 10195796
+  },
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 16777216,
+    "metric": "manifest_sign",
+    "samples": 30,
+    "median_ns": 3076098,
+    "p95_ns": 3595013
+  },
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 16777216,
+    "metric": "manifest_verify",
+    "samples": 30,
+    "median_ns": 186574,
+    "p95_ns": 275263
+  },
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 16777216,
+    "metric": "cli_sign",
+    "samples": 30,
+    "median_ns": 23239867.5,
+    "p95_ns": 25106357
+  },
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 16777216,
+    "metric": "cli_verify",
+    "samples": 30,
+    "median_ns": 17418677.5,
+    "p95_ns": 20176313
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 0,
+    "metric": "keygen",
+    "samples": 5,
+    "median_ns": 18825,
+    "p95_ns": 119437
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 1024,
+    "metric": "artifact_sha256",
+    "samples": 30,
+    "median_ns": 691,
+    "p95_ns": 732
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 1024,
+    "metric": "manifest_sign",
+    "samples": 30,
+    "median_ns": 35347,
+    "p95_ns": 50586
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 1024,
+    "metric": "manifest_verify",
+    "samples": 30,
+    "median_ns": 71360,
+    "p95_ns": 101623
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 1024,
+    "metric": "cli_sign",
+    "samples": 30,
+    "median_ns": 4919131.5,
+    "p95_ns": 6165415
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 1024,
+    "metric": "cli_verify",
+    "samples": 30,
+    "median_ns": 5141294.5,
+    "p95_ns": 5976933
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 1048576,
+    "metric": "artifact_sha256",
+    "samples": 30,
+    "median_ns": 574731.5,
+    "p95_ns": 644825
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 1048576,
+    "metric": "manifest_sign",
+    "samples": 30,
+    "median_ns": 37045.5,
+    "p95_ns": 89741
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 1048576,
+    "metric": "manifest_verify",
+    "samples": 30,
+    "median_ns": 80527.5,
+    "p95_ns": 98317
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 1048576,
+    "metric": "cli_sign",
+    "samples": 30,
+    "median_ns": 5576773.5,
+    "p95_ns": 6201048
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 1048576,
+    "metric": "cli_verify",
+    "samples": 30,
+    "median_ns": 5338007.5,
+    "p95_ns": 6172193
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 16777216,
+    "metric": "artifact_sha256",
+    "samples": 30,
+    "median_ns": 9287481,
+    "p95_ns": 9731348
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 16777216,
+    "metric": "manifest_sign",
+    "samples": 30,
+    "median_ns": 32492,
+    "p95_ns": 56698
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 16777216,
+    "metric": "manifest_verify",
+    "samples": 30,
+    "median_ns": 79145.5,
+    "p95_ns": 121922
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 16777216,
+    "metric": "cli_sign",
+    "samples": 30,
+    "median_ns": 17725985.5,
+    "p95_ns": 18712252
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 16777216,
+    "metric": "cli_verify",
+    "samples": 30,
+    "median_ns": 17579981.5,
+    "p95_ns": 18575978
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 0,
+    "metric": "keygen",
+    "samples": 5,
+    "median_ns": 18595,
+    "p95_ns": 1126550
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 1024,
+    "metric": "artifact_sha256",
+    "samples": 30,
+    "median_ns": 691,
+    "p95_ns": 722
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 1024,
+    "metric": "manifest_sign",
+    "samples": 30,
+    "median_ns": 21661,
+    "p95_ns": 21962
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 1024,
+    "metric": "manifest_verify",
+    "samples": 30,
+    "median_ns": 50335.5,
+    "p95_ns": 69051
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 1024,
+    "metric": "cli_sign",
+    "samples": 30,
+    "median_ns": 5219318.5,
+    "p95_ns": 6494195
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 1024,
+    "metric": "cli_verify",
+    "samples": 30,
+    "median_ns": 4571378,
+    "p95_ns": 5450032
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 1048576,
+    "metric": "artifact_sha256",
+    "samples": 30,
+    "median_ns": 550976.5,
+    "p95_ns": 610129
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 1048576,
+    "metric": "manifest_sign",
+    "samples": 30,
+    "median_ns": 21752,
+    "p95_ns": 29486
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 1048576,
+    "metric": "manifest_verify",
+    "samples": 30,
+    "median_ns": 50405.5,
+    "p95_ns": 56507
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 1048576,
+    "metric": "cli_sign",
+    "samples": 30,
+    "median_ns": 6050548.5,
+    "p95_ns": 7340944
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 1048576,
+    "metric": "cli_verify",
+    "samples": 30,
+    "median_ns": 5272708.5,
+    "p95_ns": 5858817
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 16777216,
+    "metric": "artifact_sha256",
+    "samples": 30,
+    "median_ns": 9104979,
+    "p95_ns": 9414377
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 16777216,
+    "metric": "manifest_sign",
+    "samples": 30,
+    "median_ns": 21942,
+    "p95_ns": 22072
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 16777216,
+    "metric": "manifest_verify",
+    "samples": 30,
+    "median_ns": 49564,
+    "p95_ns": 57800
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 16777216,
+    "metric": "cli_sign",
+    "samples": 30,
+    "median_ns": 18511914,
+    "p95_ns": 19896242
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 16777216,
+    "metric": "cli_verify",
+    "samples": 30,
+    "median_ns": 17657324,
+    "p95_ns": 18769942
+  }
+]

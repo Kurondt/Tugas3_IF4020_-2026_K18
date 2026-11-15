@@ -1,0 +1,49 @@
+{
+  "recorded_at_utc": "2026-11-15T07:12:26.924355+00:00",
+  "base_revision": "3c383b43cbef6e107eff7a2a99a487cc81d42b23",
+  "remote_main_merged": "3c383b43cbef6e107eff7a2a99a487cc81d42b23",
+  "source_state": "uncommitted implementation on merged main",
+  "go_test_passed_tests_and_subtests": 208,
+  "test_packages": [
+    "signer/tests/bundle",
+    "signer/tests/crypto",
+    "signer/tests/integration",
+    "signer/tests/interoperability",
+    "signer/tests/jsonx",
+    "signer/tests/manifest",
+    "signer/tests/sbom",
+    "signer/tests/signing",
+    "signer/tests/trust",
+    "signer/tests/verifier"
+  ],
+  "checks": {
+    "make build check": "passed (includes vet, formatting, normal/race Go tests and two Python orchestration tests)",
+    "go test -json -count=1 ./...": "passed",
+    "actionlint v1.7.7": "passed",
+    "make docs": "passed",
+    "benchmark": "passed; 1365 measured samples; statistics independently checked against raw CSV"
+  },
+  "pending": [
+    "real Docker execution and C01-C05 registry/runner evidence",
+    "public versioned image publication and verified registry digest",
+    "public API documentation hosting"
+  ],
+  "source_sha256": {
+    "cmd/norsign/main.go": "8f252991b0857b7701baf2f0f265f84303029af17fe35f28bc618819f4bcffd0",
+    "cmd/norsign-bench/main.go": "c05d6cb8e4282da58a54ae42485b2290b9d566c9cdadb585344998924f73ace6",
+    "internal/bundle/bundle.go": "04858188b61466ec2743dc7b8bedd86a78fbd0ee8f808c8ac20222979ebac09c",
+    "internal/cli/cli.go": "517a801b958c4b7e06951f2c7822c3306758f524c9e447ed36505b6c00635a01",
+    "internal/cli/sbom.go": "f328a9b9f32dfce25abb7002d5d52e0f74a68dbb16261a4018b6aa3f67a13bde",
+    "internal/contract/contract.go": "9631eaeff2262c14dcc80693b60a4ba9ea5a81630d02254795932ac7e16d51f8",
+    "internal/crypto/crypto.go": "571da5496619a3a31d743d48ff5524b2f39a8086dd9999e96e7a7e82d3e4b8ac",
+    "internal/fileio/fileio.go": "de896156479ffe3cfdc4326250a5a2f311dca1724f00853b5c31f1ccf4a285bb",
+    "internal/jsonx/jsonx.go": "610b232c2b10051f19f21472d9479820c8ce98ca67b4d2dfa221e9e03be53f89",
+    "internal/keys/keys.go": "8afb34f91cf2e7414341c7aa0ca21d97271118dae8fdd508c40f4272a5381a59",
+    "internal/manifest/manifest.go": "c2eb88414e55035d27167029deb7244a58dcfee8afbf474dcc3f35b899a98e99",
+    "internal/sbom/sbom.go": "d9ffd4447de5d9cfdc49815fbf52ce467fe7b8f540614be47cd684578784b0dc",
+    "internal/signing/signing.go": "62dd4acc52adbae7361136d758f8d0440df67c56e39915707bbb45f12d02e30c",
+    "internal/trust/trust.go": "a28d31b0615d12dd3e3baf44530ad218d23d27a856505586190e749ee10c2b98",
+    "internal/verifier/verifier.go": "149ce73185a571fb70709164f5b96941301b0cff3bceb390bd1257cf54d06905"
+  },
+  "python": "3.14.4"
+}

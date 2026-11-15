@@ -1,0 +1,2 @@
+mkdir -p docs/site
+pandoc --standalone --metadata title="norsign API" docs/API.md -o docs/site/index.html

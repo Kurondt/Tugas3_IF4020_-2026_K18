@@ -1,7 +1,7 @@
 # Fixture test data
 
 All files in `testdata/` were generated once during setup and committed.
-They exercise the contracts in `docs/CONTRACTS.md` without needing any member's implementation
+They exercise the contracts in `docs/API.md` without needing any member's implementation
 to run first. Keys are test-only.
 
 ## Layout
@@ -37,7 +37,7 @@ to run first. Keys are test-only.
 
 | Scenario | Covered by |
 |---|---|
-| U01 sign+verify text/binary/empty × 3 algos | `unit.TestVerifyOKForAllProfilesAndArtifactKinds`, fixture bundles |
+| U01 sign+verify text/binary/empty × 3 algos | `verifier_test.TestVerifyOKForAllProfilesAndArtifactKinds`, fixture bundles |
 | U02 change one byte | `binary_bad_byte.bin` → ARTIFACT_MISMATCH |
 | U03 add/remove bytes | `binary_truncated.bin`, `binary_extended.bin` |
 | U04 changed manifest version | `bundle_ed25519_manifest_tampered.json` |
@@ -50,6 +50,6 @@ to run first. Keys are test-only.
 | U11 unsupported algorithm | `unsupported_algo.json`, `bundle_unsupported_algo.json` |
 | U12 other key, same profile | `*_other_key.json` bundles |
 | U13 reformatted bundle JSON | `bundle_reordered.json`, `bundle_pretty.json` (OK) |
-| U14 twice-signed manifest | `bundle_ed25519_second.json` + determinism tests |
+| U14 twice-signed manifest | `TestU14BothBundles` (all profiles) + fixed Ed25519 fixtures |
 
 Treat the fixtures as fixed test data; regenerate only if a contract changes.

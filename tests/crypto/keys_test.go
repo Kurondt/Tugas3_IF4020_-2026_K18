@@ -161,3 +161,15 @@ func TestPEMLabels(t *testing.T) {
 		t.Fatal("expected legacy fixture to use RSA PRIVATE KEY label")
 	}
 }
+
+func TestRejectMultiplePEMBlocksIncludingMalformedPrefix(t *testing.T) {
+	data, err := os.ReadFile(fixturePath("keys", "ed25519.pub.pem"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, bad := range [][]byte{append(append([]byte{}, data...), data...), append([]byte("-----BEGIN PUBLIC KEY-----\n!\n-----END PUBLIC KEY-----\n"), data...), append(append([]byte{}, data...), []byte("trailing junk")...)} {
+		if _, err := keys.ParsePublic(bad); err == nil {
+			t.Fatal("accepted multiple blocks or trailing data")
+		}
+	}
+}

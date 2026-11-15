@@ -1,0 +1,74 @@
+[
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 1024,
+    "private_der_bytes": 1792,
+    "public_der_bytes": 422,
+    "signature_bytes": 384,
+    "bundle_bytes": 988
+  },
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 1048576,
+    "private_der_bytes": 1792,
+    "public_der_bytes": 422,
+    "signature_bytes": 384,
+    "bundle_bytes": 996
+  },
+  {
+    "algorithm": "rsa-pss-sha256",
+    "artifact_bytes": 16777216,
+    "private_der_bytes": 1792,
+    "public_der_bytes": 422,
+    "signature_bytes": 384,
+    "bundle_bytes": 1000
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 1024,
+    "private_der_bytes": 138,
+    "public_der_bytes": 91,
+    "signature_bytes": 64,
+    "bundle_bytes": 568
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 1048576,
+    "private_der_bytes": 138,
+    "public_der_bytes": 91,
+    "signature_bytes": 64,
+    "bundle_bytes": 576
+  },
+  {
+    "algorithm": "ecdsa-p256-sha256",
+    "artifact_bytes": 16777216,
+    "private_der_bytes": 138,
+    "public_der_bytes": 91,
+    "signature_bytes": 64,
+    "bundle_bytes": 580
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 1024,
+    "private_der_bytes": 48,
+    "public_der_bytes": 44,
+    "signature_bytes": 64,
+    "bundle_bytes": 556
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 1048576,
+    "private_der_bytes": 48,
+    "public_der_bytes": 44,
+    "signature_bytes": 64,
+    "bundle_bytes": 564
+  },
+  {
+    "algorithm": "ed25519",
+    "artifact_bytes": 16777216,
+    "private_der_bytes": 48,
+    "public_der_bytes": 44,
+    "signature_bytes": 64,
+    "bundle_bytes": 564
+  }
+]

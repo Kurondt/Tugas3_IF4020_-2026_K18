@@ -1,0 +1,920 @@
+{"Time":"2026-11-15T14:11:22.556241344+07:00","Action":"start","Package":"signer/cmd/norsign"}
+{"Time":"2026-11-15T14:11:22.557412346+07:00","Action":"start","Package":"signer/cmd/norsign-bench"}
+{"Time":"2026-11-15T14:11:22.557568733+07:00","Action":"start","Package":"signer/internal/bundle"}
+{"Time":"2026-11-15T14:11:22.557633518+07:00","Action":"output","Package":"signer/cmd/norsign-bench","Output":"?   \tsigner/cmd/norsign-bench\t[no test files]\n"}
+{"Time":"2026-11-15T14:11:22.557944477+07:00","Action":"skip","Package":"signer/cmd/norsign-bench","Elapsed":0.001}
+{"Time":"2026-11-15T14:11:22.558015322+07:00","Action":"start","Package":"signer/internal/cli"}
+{"Time":"2026-11-15T14:11:22.558027565+07:00","Action":"output","Package":"signer/internal/cli","Output":"?   \tsigner/internal/cli\t[no test files]\n"}
+{"Time":"2026-11-15T14:11:22.558037624+07:00","Action":"skip","Package":"signer/internal/cli","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.557590214+07:00","Action":"output","Package":"signer/internal/bundle","Output":"?   \tsigner/internal/bundle\t[no test files]\n"}
+{"Time":"2026-11-15T14:11:22.558107887+07:00","Action":"start","Package":"signer/internal/contract"}
+{"Time":"2026-11-15T14:11:22.558113079+07:00","Action":"skip","Package":"signer/internal/bundle","Elapsed":0.001}
+{"Time":"2026-11-15T14:11:22.558131853+07:00","Action":"output","Package":"signer/internal/contract","Output":"?   \tsigner/internal/contract\t[no test files]\n"}
+{"Time":"2026-11-15T14:11:22.558141212+07:00","Action":"start","Package":"signer/internal/crypto"}
+{"Time":"2026-11-15T14:11:22.558142343+07:00","Action":"skip","Package":"signer/internal/contract","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.558162792+07:00","Action":"start","Package":"signer/internal/fileio"}
+{"Time":"2026-11-15T14:11:22.558183883+07:00","Action":"output","Package":"signer/internal/crypto","Output":"?   \tsigner/internal/crypto\t[no test files]\n"}
+{"Time":"2026-11-15T14:11:22.558193801+07:00","Action":"output","Package":"signer/internal/fileio","Output":"?   \tsigner/internal/fileio\t[no test files]\n"}
+{"Time":"2026-11-15T14:11:22.558194353+07:00","Action":"skip","Package":"signer/internal/crypto","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.558202998+07:00","Action":"skip","Package":"signer/internal/fileio","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.5582191+07:00","Action":"start","Package":"signer/internal/jsonx"}
+{"Time":"2026-11-15T14:11:22.557006686+07:00","Action":"output","Package":"signer/cmd/norsign","Output":"?   \tsigner/cmd/norsign\t[no test files]\n"}
+{"Time":"2026-11-15T14:11:22.558239018+07:00","Action":"start","Package":"signer/internal/keys"}
+{"Time":"2026-11-15T14:11:22.55826627+07:00","Action":"output","Package":"signer/internal/keys","Output":"?   \tsigner/internal/keys\t[no test files]\n"}
+{"Time":"2026-11-15T14:11:22.558243856+07:00","Action":"skip","Package":"signer/cmd/norsign","Elapsed":0.016}
+{"Time":"2026-11-15T14:11:22.558272081+07:00","Action":"skip","Package":"signer/internal/keys","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.558288891+07:00","Action":"start","Package":"signer/internal/manifest"}
+{"Time":"2026-11-15T14:11:22.558300193+07:00","Action":"output","Package":"signer/internal/manifest","Output":"?   \tsigner/internal/manifest\t[no test files]\n"}
+{"Time":"2026-11-15T14:11:22.558306306+07:00","Action":"start","Package":"signer/internal/sbom"}
+{"Time":"2026-11-15T14:11:22.558313147+07:00","Action":"skip","Package":"signer/internal/manifest","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.558319912+07:00","Action":"output","Package":"signer/internal/sbom","Output":"?   \tsigner/internal/sbom\t[no test files]\n"}
+{"Time":"2026-11-15T14:11:22.558325202+07:00","Action":"skip","Package":"signer/internal/sbom","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.558329428+07:00","Action":"start","Package":"signer/internal/signing"}
+{"Time":"2026-11-15T14:11:22.558362782+07:00","Action":"output","Package":"signer/internal/signing","Output":"?   \tsigner/internal/signing\t[no test files]\n"}
+{"Time":"2026-11-15T14:11:22.558231965+07:00","Action":"output","Package":"signer/internal/jsonx","Output":"?   \tsigner/internal/jsonx\t[no test files]\n"}
+{"Time":"2026-11-15T14:11:22.55841885+07:00","Action":"skip","Package":"signer/internal/jsonx","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.558374504+07:00","Action":"skip","Package":"signer/internal/signing","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.558389893+07:00","Action":"start","Package":"signer/internal/trust"}
+{"Time":"2026-11-15T14:11:22.558723748+07:00","Action":"output","Package":"signer/internal/trust","Output":"?   \tsigner/internal/trust\t[no test files]\n"}
+{"Time":"2026-11-15T14:11:22.558749316+07:00","Action":"skip","Package":"signer/internal/trust","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.558755848+07:00","Action":"start","Package":"signer/internal/verifier"}
+{"Time":"2026-11-15T14:11:22.558858454+07:00","Action":"output","Package":"signer/internal/verifier","Output":"?   \tsigner/internal/verifier\t[no test files]\n"}
+{"Time":"2026-11-15T14:11:22.558880846+07:00","Action":"skip","Package":"signer/internal/verifier","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.906150971+07:00","Action":"start","Package":"signer/tests/bundle"}
+{"Time":"2026-11-15T14:11:22.915001593+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestParseValidBundles"}
+{"Time":"2026-11-15T14:11:22.918989727+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseValidBundles","Output":"=== RUN   TestParseValidBundles\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.919067575+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestParseValidBundles/ed25519"}
+{"Time":"2026-11-15T14:11:22.919078796+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseValidBundles/ed25519","Output":"=== RUN   TestParseValidBundles/ed25519\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.92131805+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseValidBundles/ed25519","Output":"--- PASS: TestParseValidBundles/ed25519 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921409754+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestParseValidBundles/ed25519","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921422108+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestParseValidBundles/ecdsa-p256"}
+{"Time":"2026-11-15T14:11:22.921429582+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseValidBundles/ecdsa-p256","Output":"=== RUN   TestParseValidBundles/ecdsa-p256\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921438799+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseValidBundles/ecdsa-p256","Output":"--- PASS: TestParseValidBundles/ecdsa-p256 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921444861+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestParseValidBundles/ecdsa-p256","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921450992+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestParseValidBundles/rsa-pss"}
+{"Time":"2026-11-15T14:11:22.921456924+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseValidBundles/rsa-pss","Output":"=== RUN   TestParseValidBundles/rsa-pss\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921464228+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseValidBundles/rsa-pss","Output":"--- PASS: TestParseValidBundles/rsa-pss (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921469367+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestParseValidBundles/rsa-pss","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921474417+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseValidBundles","Output":"--- PASS: TestParseValidBundles (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921479086+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestParseValidBundles","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921483154+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestBundleRoundtrip"}
+{"Time":"2026-11-15T14:11:22.921487432+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestBundleRoundtrip","Output":"=== RUN   TestBundleRoundtrip\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.92152859+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestBundleRoundtrip","Output":"--- PASS: TestBundleRoundtrip (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921535463+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestBundleRoundtrip","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921540312+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestBundleFieldOrderAndWhitespaceAreFree"}
+{"Time":"2026-11-15T14:11:22.921544189+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestBundleFieldOrderAndWhitespaceAreFree","Output":"=== RUN   TestBundleFieldOrderAndWhitespaceAreFree\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921557755+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestBundleFieldOrderAndWhitespaceAreFree/bundle_reordered.json"}
+{"Time":"2026-11-15T14:11:22.921563526+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestBundleFieldOrderAndWhitespaceAreFree/bundle_reordered.json","Output":"=== RUN   TestBundleFieldOrderAndWhitespaceAreFree/bundle_reordered.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.92157619+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestBundleFieldOrderAndWhitespaceAreFree/bundle_reordered.json","Output":"--- PASS: TestBundleFieldOrderAndWhitespaceAreFree/bundle_reordered.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921582612+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestBundleFieldOrderAndWhitespaceAreFree/bundle_reordered.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921587051+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestBundleFieldOrderAndWhitespaceAreFree/bundle_pretty.json"}
+{"Time":"2026-11-15T14:11:22.921591058+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestBundleFieldOrderAndWhitespaceAreFree/bundle_pretty.json","Output":"=== RUN   TestBundleFieldOrderAndWhitespaceAreFree/bundle_pretty.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921598953+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestBundleFieldOrderAndWhitespaceAreFree/bundle_pretty.json","Output":"--- PASS: TestBundleFieldOrderAndWhitespaceAreFree/bundle_pretty.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921605316+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestBundleFieldOrderAndWhitespaceAreFree/bundle_pretty.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.92161286+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestBundleFieldOrderAndWhitespaceAreFree","Output":"--- PASS: TestBundleFieldOrderAndWhitespaceAreFree (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921618471+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestBundleFieldOrderAndWhitespaceAreFree","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921624021+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles"}
+{"Time":"2026-11-15T14:11:22.92162863+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles","Output":"=== RUN   TestParseRejectsMalformedBundles\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921634471+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_extra_field.json"}
+{"Time":"2026-11-15T14:11:22.921640122+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_extra_field.json","Output":"=== RUN   TestParseRejectsMalformedBundles/bundle_extra_field.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921647506+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_extra_field.json","Output":"--- PASS: TestParseRejectsMalformedBundles/bundle_extra_field.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921658196+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_extra_field.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921662965+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_duplicate_field.json"}
+{"Time":"2026-11-15T14:11:22.921669487+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_duplicate_field.json","Output":"=== RUN   TestParseRejectsMalformedBundles/bundle_duplicate_field.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921677142+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_duplicate_field.json","Output":"--- PASS: TestParseRejectsMalformedBundles/bundle_duplicate_field.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921682151+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_duplicate_field.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921688574+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_missing_field.json"}
+{"Time":"2026-11-15T14:11:22.921692481+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_missing_field.json","Output":"=== RUN   TestParseRejectsMalformedBundles/bundle_missing_field.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921698252+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_missing_field.json","Output":"--- PASS: TestParseRejectsMalformedBundles/bundle_missing_field.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921703943+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_missing_field.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921708331+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_wrong_schema.json"}
+{"Time":"2026-11-15T14:11:22.921714423+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_wrong_schema.json","Output":"=== RUN   TestParseRejectsMalformedBundles/bundle_wrong_schema.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921720304+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_wrong_schema.json","Output":"--- PASS: TestParseRejectsMalformedBundles/bundle_wrong_schema.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921724963+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_wrong_schema.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921729962+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_b64_whitespace.json"}
+{"Time":"2026-11-15T14:11:22.921735703+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_b64_whitespace.json","Output":"=== RUN   TestParseRejectsMalformedBundles/bundle_b64_whitespace.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921742757+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_b64_whitespace.json","Output":"--- PASS: TestParseRejectsMalformedBundles/bundle_b64_whitespace.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921749449+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_b64_whitespace.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921755401+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_b64_bad_char.json"}
+{"Time":"2026-11-15T14:11:22.921764468+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_b64_bad_char.json","Output":"=== RUN   TestParseRejectsMalformedBundles/bundle_b64_bad_char.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921778354+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_b64_bad_char.json","Output":"--- PASS: TestParseRejectsMalformedBundles/bundle_b64_bad_char.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921784095+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_b64_bad_char.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921788944+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_b64_unpadded.json"}
+{"Time":"2026-11-15T14:11:22.921793092+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_b64_unpadded.json","Output":"=== RUN   TestParseRejectsMalformedBundles/bundle_b64_unpadded.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921798963+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_b64_unpadded.json","Output":"--- PASS: TestParseRejectsMalformedBundles/bundle_b64_unpadded.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921804173+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_b64_unpadded.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921808461+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_oversize.json"}
+{"Time":"2026-11-15T14:11:22.921812539+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_oversize.json","Output":"=== RUN   TestParseRejectsMalformedBundles/bundle_oversize.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.92181804+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_oversize.json","Output":"--- PASS: TestParseRejectsMalformedBundles/bundle_oversize.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921857354+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles/bundle_oversize.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921868275+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles","Output":"--- PASS: TestParseRejectsMalformedBundles (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921874727+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestParseRejectsMalformedBundles","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921879897+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestBundleSizeLimit"}
+{"Time":"2026-11-15T14:11:22.921884666+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestBundleSizeLimit","Output":"=== RUN   TestBundleSizeLimit\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.92189206+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestBundleSizeLimit","Output":"--- PASS: TestBundleSizeLimit (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.92189744+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestBundleSizeLimit","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921902209+07:00","Action":"run","Package":"signer/tests/bundle","Test":"TestBundleBuildRejectsOversizeManifest"}
+{"Time":"2026-11-15T14:11:22.92190765+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestBundleBuildRejectsOversizeManifest","Output":"=== RUN   TestBundleBuildRejectsOversizeManifest\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921914483+07:00","Action":"output","Package":"signer/tests/bundle","Test":"TestBundleBuildRejectsOversizeManifest","Output":"--- PASS: TestBundleBuildRejectsOversizeManifest (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.921920204+07:00","Action":"pass","Package":"signer/tests/bundle","Test":"TestBundleBuildRejectsOversizeManifest","Elapsed":0}
+{"Time":"2026-11-15T14:11:22.921925694+07:00","Action":"output","Package":"signer/tests/bundle","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:22.922081901+07:00","Action":"output","Package":"signer/tests/bundle","Output":"ok  \tsigner/tests/bundle\t0.015s\n"}
+{"Time":"2026-11-15T14:11:22.92210238+07:00","Action":"pass","Package":"signer/tests/bundle","Elapsed":0.016}
+{"Time":"2026-11-15T14:11:23.02716858+07:00","Action":"start","Package":"signer/tests/crypto"}
+{"Time":"2026-11-15T14:11:23.03175184+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestSignVerifyRoundtrip"}
+{"Time":"2026-11-15T14:11:23.031833465+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestSignVerifyRoundtrip","Output":"=== RUN   TestSignVerifyRoundtrip\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.031847912+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestSignVerifyRoundtrip/ed25519"}
+{"Time":"2026-11-15T14:11:23.031853343+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestSignVerifyRoundtrip/ed25519","Output":"=== RUN   TestSignVerifyRoundtrip/ed25519\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.033006054+07:00","Action":"start","Package":"signer/tests/integration"}
+{"Time":"2026-11-15T14:11:23.033166121+07:00","Action":"start","Package":"signer/tests/interoperability"}
+{"Time":"2026-11-15T14:11:23.033211312+07:00","Action":"start","Package":"signer/tests/jsonx"}
+{"Time":"2026-11-15T14:11:23.033254915+07:00","Action":"start","Package":"signer/tests/manifest"}
+{"Time":"2026-11-15T14:11:23.034358102+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestSignVerifyRoundtrip/ed25519","Output":"--- PASS: TestSignVerifyRoundtrip/ed25519 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.034420641+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestSignVerifyRoundtrip/ed25519","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.034431161+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestSignVerifyRoundtrip/ecdsa-p256"}
+{"Time":"2026-11-15T14:11:23.034437292+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestSignVerifyRoundtrip/ecdsa-p256","Output":"=== RUN   TestSignVerifyRoundtrip/ecdsa-p256\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.035384091+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestSignVerifyRoundtrip/ecdsa-p256","Output":"--- PASS: TestSignVerifyRoundtrip/ecdsa-p256 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.035417073+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestSignVerifyRoundtrip/ecdsa-p256","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.035425149+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestSignVerifyRoundtrip/rsa-pss"}
+{"Time":"2026-11-15T14:11:23.035429998+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestSignVerifyRoundtrip/rsa-pss","Output":"=== RUN   TestSignVerifyRoundtrip/rsa-pss\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.036873278+07:00","Action":"run","Package":"signer/tests/jsonx","Test":"TestStrictJSON"}
+{"Time":"2026-11-15T14:11:23.036993927+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON","Output":"=== RUN   TestStrictJSON\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.03701641+07:00","Action":"run","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{\"x\":1,\"\\u0078\":2}"}
+{"Time":"2026-11-15T14:11:23.037026328+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{\"x\":1,\"\\u0078\":2}","Output":"=== RUN   TestStrictJSON/{\"x\":1,\"\\u0078\":2}\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.037048921+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{\"x\":1,\"\\u0078\":2}","Output":"--- PASS: TestStrictJSON/{\"x\":1,\"\\u0078\":2} (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.037056315+07:00","Action":"pass","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{\"x\":1,\"\\u0078\":2}","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.037065793+07:00","Action":"run","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{\"x\":[{\"a\":1,\"a\":2}]}"}
+{"Time":"2026-11-15T14:11:23.037121579+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{\"x\":[{\"a\":1,\"a\":2}]}","Output":"=== RUN   TestStrictJSON/{\"x\":[{\"a\":1,\"a\":2}]}\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.037132029+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{\"x\":[{\"a\":1,\"a\":2}]}","Output":"--- PASS: TestStrictJSON/{\"x\":[{\"a\":1,\"a\":2}]} (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.037370382+07:00","Action":"pass","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{\"x\":[{\"a\":1,\"a\":2}]}","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.037398676+07:00","Action":"run","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{}_{}"}
+{"Time":"2026-11-15T14:11:23.037419405+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{}_{}","Output":"=== RUN   TestStrictJSON/{}_{}\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.037428021+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{}_{}","Output":"--- PASS: TestStrictJSON/{}_{} (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.037444683+07:00","Action":"pass","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{}_{}","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.037451225+07:00","Action":"run","Package":"signer/tests/jsonx","Test":"TestStrictJSON/\\ufeff{}"}
+{"Time":"2026-11-15T14:11:23.037456546+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON/\\ufeff{}","Output":"=== RUN   TestStrictJSON/\\ufeff{}\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.037468989+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON/\\ufeff{}","Output":"--- PASS: TestStrictJSON/\\ufeff{} (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.037476584+07:00","Action":"pass","Package":"signer/tests/jsonx","Test":"TestStrictJSON/\\ufeff{}","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.037482966+07:00","Action":"run","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{\"x\":\"�\"}"}
+{"Time":"2026-11-15T14:11:23.037488376+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{\"x\":\"�\"}","Output":"=== RUN   TestStrictJSON/{\"x\":\"�\"}\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.037494317+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{\"x\":\"�\"}","Output":"--- PASS: TestStrictJSON/{\"x\":\"�\"} (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.037500369+07:00","Action":"pass","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{\"x\":\"�\"}","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.037505448+07:00","Action":"run","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{\"x\":1,}"}
+{"Time":"2026-11-15T14:11:23.037510759+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{\"x\":1,}","Output":"=== RUN   TestStrictJSON/{\"x\":1,}\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.03751666+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{\"x\":1,}","Output":"--- PASS: TestStrictJSON/{\"x\":1,} (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.037521258+07:00","Action":"pass","Package":"signer/tests/jsonx","Test":"TestStrictJSON/{\"x\":1,}","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.037525456+07:00","Action":"run","Package":"signer/tests/jsonx","Test":"TestStrictJSON/[1,]"}
+{"Time":"2026-11-15T14:11:23.037529153+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON/[1,]","Output":"=== RUN   TestStrictJSON/[1,]\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.037534995+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON/[1,]","Output":"--- PASS: TestStrictJSON/[1,] (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.037540164+07:00","Action":"pass","Package":"signer/tests/jsonx","Test":"TestStrictJSON/[1,]","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.037545034+07:00","Action":"run","Package":"signer/tests/jsonx","Test":"TestStrictJSON/[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[["}
+{"Time":"2026-11-15T14:11:23.037556045+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON/[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[","Output":"=== RUN   TestStrictJSON/[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.037953485+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON/[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[","Output":"--- PASS: TestStrictJSON/[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.037969034+07:00","Action":"pass","Package":"signer/tests/jsonx","Test":"TestStrictJSON/[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.037978412+07:00","Action":"output","Package":"signer/tests/jsonx","Test":"TestStrictJSON","Output":"--- PASS: TestStrictJSON (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.037984263+07:00","Action":"pass","Package":"signer/tests/jsonx","Test":"TestStrictJSON","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.037988561+07:00","Action":"output","Package":"signer/tests/jsonx","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.038854833+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseValidManifest"}
+{"Time":"2026-11-15T14:11:23.038918855+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseValidManifest","Output":"=== RUN   TestParseValidManifest\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039148209+07:00","Action":"output","Package":"signer/tests/jsonx","Output":"ok  \tsigner/tests/jsonx\t0.006s\n"}
+{"Time":"2026-11-15T14:11:23.039173587+07:00","Action":"pass","Package":"signer/tests/jsonx","Elapsed":0.006}
+{"Time":"2026-11-15T14:11:23.039440155+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseValidManifest","Output":"--- PASS: TestParseValidManifest (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039455183+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseValidManifest","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.039465894+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestCanonicalSerialization"}
+{"Time":"2026-11-15T14:11:23.039470813+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestCanonicalSerialization","Output":"=== RUN   TestCanonicalSerialization\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039502303+07:00","Action":"run","Package":"signer/tests/integration","Test":"TestHelpAndVersion"}
+{"Time":"2026-11-15T14:11:23.039533172+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestHelpAndVersion","Output":"=== RUN   TestHelpAndVersion\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.03954842+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestHelpAndVersion","Output":"--- PASS: TestHelpAndVersion (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039554662+07:00","Action":"pass","Package":"signer/tests/integration","Test":"TestHelpAndVersion","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.039562507+07:00","Action":"run","Package":"signer/tests/integration","Test":"TestKeygenCommand"}
+{"Time":"2026-11-15T14:11:23.039566415+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestKeygenCommand","Output":"=== RUN   TestKeygenCommand\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039577716+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestCanonicalSerialization","Output":"--- PASS: TestCanonicalSerialization (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.03958521+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestCanonicalSerialization","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.039589579+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestManifestFieldOrder"}
+{"Time":"2026-11-15T14:11:23.039593877+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestManifestFieldOrder","Output":"=== RUN   TestManifestFieldOrder\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039613654+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestManifestFieldOrder","Output":"--- PASS: TestManifestFieldOrder (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039639423+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestManifestFieldOrder","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.039646266+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues"}
+{"Time":"2026-11-15T14:11:23.039650013+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues","Output":"=== RUN   TestBuildRejectsInvalidValues\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039736376+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_package"}
+{"Time":"2026-11-15T14:11:23.039749801+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_package","Output":"=== RUN   TestBuildRejectsInvalidValues/bad_package\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039761504+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_package","Output":"--- PASS: TestBuildRejectsInvalidValues/bad_package (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039766904+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_package","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.039772725+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_version"}
+{"Time":"2026-11-15T14:11:23.039776683+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_version","Output":"=== RUN   TestBuildRejectsInvalidValues/bad_version\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039784748+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_version","Output":"--- PASS: TestBuildRejectsInvalidValues/bad_version (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039830214+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_version","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.039837498+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_algorithm"}
+{"Time":"2026-11-15T14:11:23.039841395+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_algorithm","Output":"=== RUN   TestBuildRejectsInvalidValues/bad_algorithm\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039848238+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_algorithm","Output":"--- PASS: TestBuildRejectsInvalidValues/bad_algorithm (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039905689+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_algorithm","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.039918093+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_keyid"}
+{"Time":"2026-11-15T14:11:23.039924735+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_keyid","Output":"=== RUN   TestBuildRejectsInvalidValues/bad_keyid\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039933893+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_keyid","Output":"--- PASS: TestBuildRejectsInvalidValues/bad_keyid (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039939323+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_keyid","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.039944503+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_name"}
+{"Time":"2026-11-15T14:11:23.03994847+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_name","Output":"=== RUN   TestBuildRejectsInvalidValues/bad_name\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039962928+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_name","Output":"--- PASS: TestBuildRejectsInvalidValues/bad_name (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.039968048+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_name","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.039976033+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_size"}
+{"Time":"2026-11-15T14:11:23.039980601+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_size","Output":"=== RUN   TestBuildRejectsInvalidValues/bad_size\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.040206088+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_size","Output":"--- PASS: TestBuildRejectsInvalidValues/bad_size (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.040220215+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/bad_size","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.040225776+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/oversize"}
+{"Time":"2026-11-15T14:11:23.040230264+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/oversize","Output":"=== RUN   TestBuildRejectsInvalidValues/oversize\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.040236356+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/oversize","Output":"--- PASS: TestBuildRejectsInvalidValues/oversize (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.040261403+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues/oversize","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.040269158+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues","Output":"--- PASS: TestBuildRejectsInvalidValues (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.04027541+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestBuildRejectsInvalidValues","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.040379048+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests"}
+{"Time":"2026-11-15T14:11:23.040391011+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests","Output":"=== RUN   TestParseRejectsMalformedManifests\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.040446045+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/array_manifest.json"}
+{"Time":"2026-11-15T14:11:23.040453359+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/array_manifest.json","Output":"=== RUN   TestParseRejectsMalformedManifests/array_manifest.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.04028017+07:00","Action":"run","Package":"signer/tests/interoperability","Test":"TestOpenSSL"}
+{"Time":"2026-11-15T14:11:23.040463268+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/array_manifest.json","Output":"--- PASS: TestParseRejectsMalformedManifests/array_manifest.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.040470833+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/array_manifest.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.040491402+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/artifact_extra_field.json"}
+{"Time":"2026-11-15T14:11:23.040497303+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/artifact_extra_field.json","Output":"=== RUN   TestParseRejectsMalformedManifests/artifact_extra_field.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.040466859+07:00","Action":"output","Package":"signer/tests/interoperability","Test":"TestOpenSSL","Output":"=== RUN   TestOpenSSL\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.040536701+07:00","Action":"run","Package":"signer/tests/interoperability","Test":"TestOpenSSL/rsa-pss-sha256"}
+{"Time":"2026-11-15T14:11:23.040544286+07:00","Action":"output","Package":"signer/tests/interoperability","Test":"TestOpenSSL/rsa-pss-sha256","Output":"=== RUN   TestOpenSSL/rsa-pss-sha256\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.040581912+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/artifact_extra_field.json","Output":"--- PASS: TestParseRejectsMalformedManifests/artifact_extra_field.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.040595227+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/artifact_extra_field.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.040602561+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/artifact_missing_name.json"}
+{"Time":"2026-11-15T14:11:23.040607441+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/artifact_missing_name.json","Output":"=== RUN   TestParseRejectsMalformedManifests/artifact_missing_name.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.040689406+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/artifact_missing_name.json","Output":"--- PASS: TestParseRejectsMalformedManifests/artifact_missing_name.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.040705236+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/artifact_missing_name.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.040711168+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/bad_schema.json"}
+{"Time":"2026-11-15T14:11:23.040715376+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/bad_schema.json","Output":"=== RUN   TestParseRejectsMalformedManifests/bad_schema.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.040816468+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/bad_schema.json","Output":"--- PASS: TestParseRejectsMalformedManifests/bad_schema.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.040826146+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/bad_schema.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.040831426+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/bom.json"}
+{"Time":"2026-11-15T14:11:23.040834562+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/bom.json","Output":"=== RUN   TestParseRejectsMalformedManifests/bom.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.040930725+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/bom.json","Output":"--- PASS: TestParseRejectsMalformedManifests/bom.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.040945082+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/bom.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.040950422+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/duplicate_field.json"}
+{"Time":"2026-11-15T14:11:23.040956874+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/duplicate_field.json","Output":"=== RUN   TestParseRejectsMalformedManifests/duplicate_field.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041046985+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/duplicate_field.json","Output":"--- PASS: TestParseRejectsMalformedManifests/duplicate_field.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041058938+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/duplicate_field.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.041065661+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/empty_file.json"}
+{"Time":"2026-11-15T14:11:23.041069658+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/empty_file.json","Output":"=== RUN   TestParseRejectsMalformedManifests/empty_file.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041147431+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/empty_file.json","Output":"--- PASS: TestParseRejectsMalformedManifests/empty_file.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041164564+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/empty_file.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.041170485+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/empty_object.json"}
+{"Time":"2026-11-15T14:11:23.041176637+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/empty_object.json","Output":"=== RUN   TestParseRejectsMalformedManifests/empty_object.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.0412759+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/empty_object.json","Output":"--- PASS: TestParseRejectsMalformedManifests/empty_object.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041325334+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/empty_object.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.041335373+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/extra_field.json"}
+{"Time":"2026-11-15T14:11:23.041340162+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/extra_field.json","Output":"=== RUN   TestParseRejectsMalformedManifests/extra_field.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041349109+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/extra_field.json","Output":"--- PASS: TestParseRejectsMalformedManifests/extra_field.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041354359+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/extra_field.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.041359259+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/keyid_bad_length.json"}
+{"Time":"2026-11-15T14:11:23.041363426+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/keyid_bad_length.json","Output":"=== RUN   TestParseRejectsMalformedManifests/keyid_bad_length.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041516958+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/keyid_bad_length.json","Output":"--- PASS: TestParseRejectsMalformedManifests/keyid_bad_length.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041529602+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/keyid_bad_length.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.041535483+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/missing_field.json"}
+{"Time":"2026-11-15T14:11:23.041540222+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/missing_field.json","Output":"=== RUN   TestParseRejectsMalformedManifests/missing_field.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041564989+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/missing_field.json","Output":"--- PASS: TestParseRejectsMalformedManifests/missing_field.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.04157058+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/missing_field.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.041577513+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/name_with_slash.json"}
+{"Time":"2026-11-15T14:11:23.041585228+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/name_with_slash.json","Output":"=== RUN   TestParseRejectsMalformedManifests/name_with_slash.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041694475+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/name_with_slash.json","Output":"--- PASS: TestParseRejectsMalformedManifests/name_with_slash.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041737056+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/name_with_slash.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.041747907+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/null_field.json"}
+{"Time":"2026-11-15T14:11:23.041756333+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/null_field.json","Output":"=== RUN   TestParseRejectsMalformedManifests/null_field.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041764428+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/null_field.json","Output":"--- PASS: TestParseRejectsMalformedManifests/null_field.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041773405+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/null_field.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.041777633+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/oversize.json"}
+{"Time":"2026-11-15T14:11:23.041780489+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/oversize.json","Output":"=== RUN   TestParseRejectsMalformedManifests/oversize.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041858221+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/oversize.json","Output":"--- PASS: TestParseRejectsMalformedManifests/oversize.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041876386+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/oversize.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.041940147+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/package_too_long.json"}
+{"Time":"2026-11-15T14:11:23.041946419+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/package_too_long.json","Output":"=== RUN   TestParseRejectsMalformedManifests/package_too_long.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041962229+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/package_too_long.json","Output":"--- PASS: TestParseRejectsMalformedManifests/package_too_long.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.041969022+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/package_too_long.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.041974232+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/package_uppercase.json"}
+{"Time":"2026-11-15T14:11:23.041989631+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/package_uppercase.json","Output":"=== RUN   TestParseRejectsMalformedManifests/package_uppercase.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042046689+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/package_uppercase.json","Output":"--- PASS: TestParseRejectsMalformedManifests/package_uppercase.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.04205764+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/package_uppercase.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.042063481+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/sha256_uppercase.json"}
+{"Time":"2026-11-15T14:11:23.042068561+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/sha256_uppercase.json","Output":"=== RUN   TestParseRejectsMalformedManifests/sha256_uppercase.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042104369+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestKeygenCommand","Output":"--- PASS: TestKeygenCommand (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042128014+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/sha256_uppercase.json","Output":"--- PASS: TestParseRejectsMalformedManifests/sha256_uppercase.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042137712+07:00","Action":"pass","Package":"signer/tests/integration","Test":"TestKeygenCommand","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.042144485+07:00","Action":"run","Package":"signer/tests/integration","Test":"TestFullFlowForAllAlgorithms"}
+{"Time":"2026-11-15T14:11:23.042148222+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestFullFlowForAllAlgorithms","Output":"=== RUN   TestFullFlowForAllAlgorithms\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042156448+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/sha256_uppercase.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.042161938+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_bool.json"}
+{"Time":"2026-11-15T14:11:23.042166287+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_bool.json","Output":"=== RUN   TestParseRejectsMalformedManifests/size_bool.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042174172+07:00","Action":"run","Package":"signer/tests/integration","Test":"TestFullFlowForAllAlgorithms/ed25519"}
+{"Time":"2026-11-15T14:11:23.042178971+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestFullFlowForAllAlgorithms/ed25519","Output":"=== RUN   TestFullFlowForAllAlgorithms/ed25519\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042272704+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_bool.json","Output":"--- PASS: TestParseRejectsMalformedManifests/size_bool.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042288864+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_bool.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.042294705+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_exponent.json"}
+{"Time":"2026-11-15T14:11:23.042298893+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_exponent.json","Output":"=== RUN   TestParseRejectsMalformedManifests/size_exponent.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042394827+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_exponent.json","Output":"--- PASS: TestParseRejectsMalformedManifests/size_exponent.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042432909+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_exponent.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.042445634+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_float.json"}
+{"Time":"2026-11-15T14:11:23.042451485+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_float.json","Output":"=== RUN   TestParseRejectsMalformedManifests/size_float.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042518135+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_float.json","Output":"--- PASS: TestParseRejectsMalformedManifests/size_float.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042558231+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_float.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.042564693+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_leading_zero.json"}
+{"Time":"2026-11-15T14:11:23.042569322+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_leading_zero.json","Output":"=== RUN   TestParseRejectsMalformedManifests/size_leading_zero.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042621367+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_leading_zero.json","Output":"--- PASS: TestParseRejectsMalformedManifests/size_leading_zero.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042653619+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_leading_zero.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.042679889+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_negative.json"}
+{"Time":"2026-11-15T14:11:23.042686321+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_negative.json","Output":"=== RUN   TestParseRejectsMalformedManifests/size_negative.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042782113+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_negative.json","Output":"--- PASS: TestParseRejectsMalformedManifests/size_negative.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042793665+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_negative.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.0428018+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_over_max.json"}
+{"Time":"2026-11-15T14:11:23.042807471+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_over_max.json","Output":"=== RUN   TestParseRejectsMalformedManifests/size_over_max.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042906107+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_over_max.json","Output":"--- PASS: TestParseRejectsMalformedManifests/size_over_max.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042920744+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_over_max.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.042926295+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_plus.json"}
+{"Time":"2026-11-15T14:11:23.042930633+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_plus.json","Output":"=== RUN   TestParseRejectsMalformedManifests/size_plus.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042951563+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_plus.json","Output":"--- PASS: TestParseRejectsMalformedManifests/size_plus.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042958045+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/size_plus.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.042963906+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/trailing_newline.json"}
+{"Time":"2026-11-15T14:11:23.042968255+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/trailing_newline.json","Output":"=== RUN   TestParseRejectsMalformedManifests/trailing_newline.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.042974251+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestSignVerifyRoundtrip/rsa-pss","Output":"--- PASS: TestSignVerifyRoundtrip/rsa-pss (0.01s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.043000822+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestSignVerifyRoundtrip/rsa-pss","Elapsed":0.01}
+{"Time":"2026-11-15T14:11:23.043012784+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestSignVerifyRoundtrip","Output":"--- PASS: TestSignVerifyRoundtrip (0.01s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.04304746+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestSignVerifyRoundtrip","Elapsed":0.01}
+{"Time":"2026-11-15T14:11:23.043083173+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/trailing_newline.json","Output":"--- PASS: TestParseRejectsMalformedManifests/trailing_newline.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.043102229+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/trailing_newline.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.043110735+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/unicode_escape.json"}
+{"Time":"2026-11-15T14:11:23.043119793+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/unicode_escape.json","Output":"=== RUN   TestParseRejectsMalformedManifests/unicode_escape.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.043262544+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/unicode_escape.json","Output":"--- PASS: TestParseRejectsMalformedManifests/unicode_escape.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.04327658+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/unicode_escape.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.043283033+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/whitespace.json"}
+{"Time":"2026-11-15T14:11:23.043290186+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/whitespace.json","Output":"=== RUN   TestParseRejectsMalformedManifests/whitespace.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.043288909+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestSignatureLengths"}
+{"Time":"2026-11-15T14:11:23.043303066+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestSignatureLengths","Output":"=== RUN   TestSignatureLengths\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.043377093+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/whitespace.json","Output":"--- PASS: TestParseRejectsMalformedManifests/whitespace.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.04339139+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/whitespace.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.043405306+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/wrong_type_package.json"}
+{"Time":"2026-11-15T14:11:23.043409875+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/wrong_type_package.json","Output":"=== RUN   TestParseRejectsMalformedManifests/wrong_type_package.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.043580227+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/wrong_type_package.json","Output":"--- PASS: TestParseRejectsMalformedManifests/wrong_type_package.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.043595947+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests/wrong_type_package.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.043606267+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests","Output":"--- PASS: TestParseRejectsMalformedManifests (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.043620343+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseRejectsMalformedManifests","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.043626204+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestParseUnsupportedAlgorithmAllowedAtFormatLevel"}
+{"Time":"2026-11-15T14:11:23.043630743+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseUnsupportedAlgorithmAllowedAtFormatLevel","Output":"=== RUN   TestParseUnsupportedAlgorithmAllowedAtFormatLevel\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.04369681+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestParseUnsupportedAlgorithmAllowedAtFormatLevel","Output":"--- PASS: TestParseUnsupportedAlgorithmAllowedAtFormatLevel (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.043713532+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestParseUnsupportedAlgorithmAllowedAtFormatLevel","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.043721156+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestManifestSizeLimit"}
+{"Time":"2026-11-15T14:11:23.043727017+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestManifestSizeLimit","Output":"=== RUN   TestManifestSizeLimit\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.043852295+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestManifestSizeLimit","Output":"--- PASS: TestManifestSizeLimit (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.043862745+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestManifestSizeLimit","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.043869588+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestBuildValidBoundaryValues"}
+{"Time":"2026-11-15T14:11:23.043874868+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildValidBoundaryValues","Output":"=== RUN   TestBuildValidBoundaryValues\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.044059619+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestBuildValidBoundaryValues","Output":"--- PASS: TestBuildValidBoundaryValues (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.044073456+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestBuildValidBoundaryValues","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.044079347+07:00","Action":"run","Package":"signer/tests/manifest","Test":"TestUnknownAlgorithmStringsRemainFormatValid"}
+{"Time":"2026-11-15T14:11:23.044084426+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestUnknownAlgorithmStringsRemainFormatValid","Output":"=== RUN   TestUnknownAlgorithmStringsRemainFormatValid\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.044249009+07:00","Action":"output","Package":"signer/tests/manifest","Test":"TestUnknownAlgorithmStringsRemainFormatValid","Output":"--- PASS: TestUnknownAlgorithmStringsRemainFormatValid (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.044280138+07:00","Action":"pass","Package":"signer/tests/manifest","Test":"TestUnknownAlgorithmStringsRemainFormatValid","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.044286691+07:00","Action":"output","Package":"signer/tests/manifest","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.04463446+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestFullFlowForAllAlgorithms/ed25519","Output":"--- PASS: TestFullFlowForAllAlgorithms/ed25519 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.044681148+07:00","Action":"pass","Package":"signer/tests/integration","Test":"TestFullFlowForAllAlgorithms/ed25519","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.044689925+07:00","Action":"run","Package":"signer/tests/integration","Test":"TestFullFlowForAllAlgorithms/ecdsa-p256-sha256"}
+{"Time":"2026-11-15T14:11:23.044694744+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestFullFlowForAllAlgorithms/ecdsa-p256-sha256","Output":"=== RUN   TestFullFlowForAllAlgorithms/ecdsa-p256-sha256\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.045595747+07:00","Action":"output","Package":"signer/tests/manifest","Output":"ok  \tsigner/tests/manifest\t0.012s\n"}
+{"Time":"2026-11-15T14:11:23.045637296+07:00","Action":"pass","Package":"signer/tests/manifest","Elapsed":0.012}
+{"Time":"2026-11-15T14:11:23.046684694+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestFullFlowForAllAlgorithms/ecdsa-p256-sha256","Output":"--- PASS: TestFullFlowForAllAlgorithms/ecdsa-p256-sha256 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.046710924+07:00","Action":"pass","Package":"signer/tests/integration","Test":"TestFullFlowForAllAlgorithms/ecdsa-p256-sha256","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.046717015+07:00","Action":"run","Package":"signer/tests/integration","Test":"TestFullFlowForAllAlgorithms/rsa-pss-sha256"}
+{"Time":"2026-11-15T14:11:23.046721714+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestFullFlowForAllAlgorithms/rsa-pss-sha256","Output":"=== RUN   TestFullFlowForAllAlgorithms/rsa-pss-sha256\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.048755869+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestSignatureLengths","Output":"--- PASS: TestSignatureLengths (0.01s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.048832295+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestSignatureLengths","Elapsed":0.01}
+{"Time":"2026-11-15T14:11:23.048850048+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestECDSASignatureEncoding"}
+{"Time":"2026-11-15T14:11:23.048854888+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestECDSASignatureEncoding","Output":"=== RUN   TestECDSASignatureEncoding\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.049516793+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestECDSASignatureEncoding","Output":"--- PASS: TestECDSASignatureEncoding (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.049538715+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestECDSASignatureEncoding","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.04955179+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestEd25519DeterministicSignatures"}
+{"Time":"2026-11-15T14:11:23.049557881+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestEd25519DeterministicSignatures","Output":"=== RUN   TestEd25519DeterministicSignatures\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.049935148+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestEd25519DeterministicSignatures","Output":"--- PASS: TestEd25519DeterministicSignatures (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.049979723+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestEd25519DeterministicSignatures","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.049987507+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestRandomizedSignaturesVerifyIndependently"}
+{"Time":"2026-11-15T14:11:23.050006834+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestRandomizedSignaturesVerifyIndependently","Output":"=== RUN   TestRandomizedSignaturesVerifyIndependently\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.050013457+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestRandomizedSignaturesVerifyIndependently/ed25519"}
+{"Time":"2026-11-15T14:11:23.050018116+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestRandomizedSignaturesVerifyIndependently/ed25519","Output":"=== RUN   TestRandomizedSignaturesVerifyIndependently/ed25519\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.050534657+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestRandomizedSignaturesVerifyIndependently/ed25519","Output":"--- PASS: TestRandomizedSignaturesVerifyIndependently/ed25519 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.050563231+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestRandomizedSignaturesVerifyIndependently/ed25519","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.050572589+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestRandomizedSignaturesVerifyIndependently/ecdsa-p256"}
+{"Time":"2026-11-15T14:11:23.05057869+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestRandomizedSignaturesVerifyIndependently/ecdsa-p256","Output":"=== RUN   TestRandomizedSignaturesVerifyIndependently/ecdsa-p256\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.051249835+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestRandomizedSignaturesVerifyIndependently/ecdsa-p256","Output":"--- PASS: TestRandomizedSignaturesVerifyIndependently/ecdsa-p256 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.051270083+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestRandomizedSignaturesVerifyIndependently/ecdsa-p256","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.051277067+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestRandomizedSignaturesVerifyIndependently/rsa-pss"}
+{"Time":"2026-11-15T14:11:23.051281806+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestRandomizedSignaturesVerifyIndependently/rsa-pss","Output":"=== RUN   TestRandomizedSignaturesVerifyIndependently/rsa-pss\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.056375476+07:00","Action":"start","Package":"signer/tests/sbom"}
+{"Time":"2026-11-15T14:11:23.056962696+07:00","Action":"start","Package":"signer/tests/signing"}
+{"Time":"2026-11-15T14:11:23.057149583+07:00","Action":"start","Package":"signer/tests/trust"}
+{"Time":"2026-11-15T14:11:23.057593416+07:00","Action":"start","Package":"signer/tests/verifier"}
+{"Time":"2026-11-15T14:11:23.062649298+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10"}
+{"Time":"2026-11-15T14:11:23.062745651+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10","Output":"=== RUN   TestFailurePrecedenceAndU10\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.062773885+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/unknown_with_malformed_trust"}
+{"Time":"2026-11-15T14:11:23.062785487+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/unknown_with_malformed_trust","Output":"=== RUN   TestFailurePrecedenceAndU10/unknown_with_malformed_trust\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.063649072+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/unknown_with_malformed_trust","Output":"--- PASS: TestFailurePrecedenceAndU10/unknown_with_malformed_trust (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.063682135+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/unknown_with_malformed_trust","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.063693256+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/duplicate"}
+{"Time":"2026-11-15T14:11:23.063718814+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/duplicate","Output":"=== RUN   TestFailurePrecedenceAndU10/duplicate\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.063980882+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestRandomizedSignaturesVerifyIndependently/rsa-pss","Output":"--- PASS: TestRandomizedSignaturesVerifyIndependently/rsa-pss (0.01s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.064005058+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestRandomizedSignaturesVerifyIndependently/rsa-pss","Elapsed":0.01}
+{"Time":"2026-11-15T14:11:23.064016981+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestRandomizedSignaturesVerifyIndependently","Output":"--- PASS: TestRandomizedSignaturesVerifyIndependently (0.01s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.064028122+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestRandomizedSignaturesVerifyIndependently","Elapsed":0.01}
+{"Time":"2026-11-15T14:11:23.064039053+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestSignersRejectForeignKeys"}
+{"Time":"2026-11-15T14:11:23.064953409+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestSignersRejectForeignKeys","Output":"=== RUN   TestSignersRejectForeignKeys\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.064984999+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestSignersRejectForeignKeys","Output":"--- PASS: TestSignersRejectForeignKeys (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.064993175+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestSignersRejectForeignKeys","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.064999246+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestGenerateAndSaveRoundtrip"}
+{"Time":"2026-11-15T14:11:23.065003625+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestGenerateAndSaveRoundtrip","Output":"=== RUN   TestGenerateAndSaveRoundtrip\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.065009456+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestGenerateAndSaveRoundtrip/rsa-pss-sha256"}
+{"Time":"2026-11-15T14:11:23.065014666+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestGenerateAndSaveRoundtrip/rsa-pss-sha256","Output":"=== RUN   TestGenerateAndSaveRoundtrip/rsa-pss-sha256\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.065086778+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/duplicate","Output":"--- PASS: TestFailurePrecedenceAndU10/duplicate (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.065115151+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/duplicate","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.065123157+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/wrong_type"}
+{"Time":"2026-11-15T14:11:23.065128577+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/wrong_type","Output":"=== RUN   TestFailurePrecedenceAndU10/wrong_type\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.06511402+07:00","Action":"run","Package":"signer/tests/sbom","Test":"TestSBOMAllProfiles"}
+{"Time":"2026-11-15T14:11:23.065171499+07:00","Action":"output","Package":"signer/tests/sbom","Test":"TestSBOMAllProfiles","Output":"=== RUN   TestSBOMAllProfiles\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.065182891+07:00","Action":"run","Package":"signer/tests/sbom","Test":"TestSBOMAllProfiles/ed25519"}
+{"Time":"2026-11-15T14:11:23.065188662+07:00","Action":"output","Package":"signer/tests/sbom","Test":"TestSBOMAllProfiles/ed25519","Output":"=== RUN   TestSBOMAllProfiles/ed25519\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.065845324+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/wrong_type","Output":"--- PASS: TestFailurePrecedenceAndU10/wrong_type (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.06588311+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestInvalidSaveLeavesOriginalAndNoTemporaryFiles"}
+{"Time":"2026-11-15T14:11:23.06604084+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestInvalidSaveLeavesOriginalAndNoTemporaryFiles","Output":"=== RUN   TestInvalidSaveLeavesOriginalAndNoTemporaryFiles\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.065881282+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/wrong_type","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.066071603+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/oversize"}
+{"Time":"2026-11-15T14:11:23.066080911+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/oversize","Output":"=== RUN   TestFailurePrecedenceAndU10/oversize\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.066154375+07:00","Action":"run","Package":"signer/tests/signing","Test":"TestProtectInputsAndOutput"}
+{"Time":"2026-11-15T14:11:23.066180585+07:00","Action":"output","Package":"signer/tests/signing","Test":"TestProtectInputsAndOutput","Output":"=== RUN   TestProtectInputsAndOutput\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.067069894+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestInvalidSaveLeavesOriginalAndNoTemporaryFiles","Output":"--- PASS: TestInvalidSaveLeavesOriginalAndNoTemporaryFiles (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.067099701+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestInvalidSaveLeavesOriginalAndNoTemporaryFiles","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.067114459+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestParseValidTrustStores"}
+{"Time":"2026-11-15T14:11:23.067118998+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseValidTrustStores","Output":"=== RUN   TestParseValidTrustStores\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.067196345+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/oversize","Output":"--- PASS: TestFailurePrecedenceAndU10/oversize (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.067225039+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/oversize","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.067236952+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/signature_before_metadata"}
+{"Time":"2026-11-15T14:11:23.06724147+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/signature_before_metadata","Output":"=== RUN   TestFailurePrecedenceAndU10/signature_before_metadata\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.067506253+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseValidTrustStores","Output":"--- PASS: TestParseValidTrustStores (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.067523536+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestParseValidTrustStores","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.067528946+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestTrustAddIdempotentAndMerging"}
+{"Time":"2026-11-15T14:11:23.067533395+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestTrustAddIdempotentAndMerging","Output":"=== RUN   TestTrustAddIdempotentAndMerging\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.068011633+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestTrustAddIdempotentAndMerging","Output":"--- PASS: TestTrustAddIdempotentAndMerging (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.06803079+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestTrustAddIdempotentAndMerging","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.068038865+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestTrustAddCreatesEntry"}
+{"Time":"2026-11-15T14:11:23.068061819+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestTrustAddCreatesEntry","Output":"=== RUN   TestTrustAddCreatesEntry\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.068227032+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestTrustAddCreatesEntry","Output":"--- PASS: TestTrustAddCreatesEntry (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.068243433+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestTrustAddCreatesEntry","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.06825192+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestTrustRemove"}
+{"Time":"2026-11-15T14:11:23.068256268+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestTrustRemove","Output":"=== RUN   TestTrustRemove\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.068848152+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestTrustRemove","Output":"--- PASS: TestTrustRemove (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.068880644+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestTrustRemove","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.068890873+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestSaveAtomicRoundtrip"}
+{"Time":"2026-11-15T14:11:23.068895692+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestSaveAtomicRoundtrip","Output":"=== RUN   TestSaveAtomicRoundtrip\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.068923946+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/signature_before_metadata","Output":"--- PASS: TestFailurePrecedenceAndU10/signature_before_metadata (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.068935328+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/signature_before_metadata","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.068970214+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/trust_before_signature"}
+{"Time":"2026-11-15T14:11:23.068979542+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/trust_before_signature","Output":"=== RUN   TestFailurePrecedenceAndU10/trust_before_signature\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.06961051+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestSaveAtomicRoundtrip","Output":"--- PASS: TestSaveAtomicRoundtrip (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.069653291+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestSaveAtomicRoundtrip","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.069663441+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestSaveAtomicKeepsPreviousFileOnFailure"}
+{"Time":"2026-11-15T14:11:23.069668641+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestSaveAtomicKeepsPreviousFileOnFailure","Output":"=== RUN   TestSaveAtomicKeepsPreviousFileOnFailure\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.069688739+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/trust_before_signature","Output":"--- PASS: TestFailurePrecedenceAndU10/trust_before_signature (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.069696343+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/trust_before_signature","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.069703226+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/different_valid_profile"}
+{"Time":"2026-11-15T14:11:23.069709037+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/different_valid_profile","Output":"=== RUN   TestFailurePrecedenceAndU10/different_valid_profile\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.070280934+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestSaveAtomicKeepsPreviousFileOnFailure","Output":"--- PASS: TestSaveAtomicKeepsPreviousFileOnFailure (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.070330558+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestSaveAtomicKeepsPreviousFileOnFailure","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.070338944+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores"}
+{"Time":"2026-11-15T14:11:23.070344214+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores","Output":"=== RUN   TestParseRejectsMalformedTrustStores\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.07033433+07:00","Action":"output","Package":"signer/tests/interoperability","Test":"TestOpenSSL/rsa-pss-sha256","Output":"    interop_test.go:99: Go -\u003e OpenSSL and OpenSSL -\u003e Go passed\n"}
+{"Time":"2026-11-15T14:11:23.070353782+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_duplicate_keyid.json"}
+{"Time":"2026-11-15T14:11:23.070361206+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_duplicate_keyid.json","Output":"=== RUN   TestParseRejectsMalformedTrustStores/trust_duplicate_keyid.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.070728154+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/different_valid_profile","Output":"--- PASS: TestFailurePrecedenceAndU10/different_valid_profile (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.070755146+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_duplicate_keyid.json","Output":"--- PASS: TestParseRejectsMalformedTrustStores/trust_duplicate_keyid.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.070769503+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_duplicate_keyid.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.070780584+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_extra_field.json"}
+{"Time":"2026-11-15T14:11:23.070786024+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_extra_field.json","Output":"=== RUN   TestParseRejectsMalformedTrustStores/trust_extra_field.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.070756057+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10/different_valid_profile","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.070801063+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10","Output":"--- PASS: TestFailurePrecedenceAndU10 (0.01s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.070807265+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestFailurePrecedenceAndU10","Elapsed":0.01}
+{"Time":"2026-11-15T14:11:23.070729537+07:00","Action":"output","Package":"signer/tests/interoperability","Test":"TestOpenSSL/rsa-pss-sha256","Output":"--- PASS: TestOpenSSL/rsa-pss-sha256 (0.03s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.070818586+07:00","Action":"pass","Package":"signer/tests/interoperability","Test":"TestOpenSSL/rsa-pss-sha256","Elapsed":0.03}
+{"Time":"2026-11-15T14:11:23.070824738+07:00","Action":"run","Package":"signer/tests/interoperability","Test":"TestOpenSSL/ecdsa-p256-sha256"}
+{"Time":"2026-11-15T14:11:23.070830549+07:00","Action":"output","Package":"signer/tests/interoperability","Test":"TestOpenSSL/ecdsa-p256-sha256","Output":"=== RUN   TestOpenSSL/ecdsa-p256-sha256\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.07084664+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_extra_field.json","Output":"--- PASS: TestParseRejectsMalformedTrustStores/trust_extra_field.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.070854785+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_extra_field.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.070866557+07:00","Action":"output","Package":"signer/tests/signing","Test":"TestProtectInputsAndOutput","Output":"--- PASS: TestProtectInputsAndOutput (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.070875945+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_entry_extra_field.json"}
+{"Time":"2026-11-15T14:11:23.070881907+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_entry_extra_field.json","Output":"=== RUN   TestParseRejectsMalformedTrustStores/trust_entry_extra_field.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.070980052+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestRemoveKeyRevokesVerification"}
+{"Time":"2026-11-15T14:11:23.070991123+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestRemoveKeyRevokesVerification","Output":"=== RUN   TestRemoveKeyRevokesVerification\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.0710052+07:00","Action":"pass","Package":"signer/tests/signing","Test":"TestProtectInputsAndOutput","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.071012063+07:00","Action":"output","Package":"signer/tests/signing","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.070979601+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_entry_extra_field.json","Output":"--- PASS: TestParseRejectsMalformedTrustStores/trust_entry_extra_field.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.071043382+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_entry_extra_field.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.071050075+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_fingerprint_mismatch.json"}
+{"Time":"2026-11-15T14:11:23.071054683+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_fingerprint_mismatch.json","Output":"=== RUN   TestParseRejectsMalformedTrustStores/trust_fingerprint_mismatch.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.071275362+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_fingerprint_mismatch.json","Output":"--- PASS: TestParseRejectsMalformedTrustStores/trust_fingerprint_mismatch.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.071295481+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_fingerprint_mismatch.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.071303576+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_bad_algorithm.json"}
+{"Time":"2026-11-15T14:11:23.071308395+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_bad_algorithm.json","Output":"=== RUN   TestParseRejectsMalformedTrustStores/trust_bad_algorithm.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.071330372+07:00","Action":"output","Package":"signer/tests/signing","Output":"ok  \tsigner/tests/signing\t0.014s\n"}
+{"Time":"2026-11-15T14:11:23.071356432+07:00","Action":"pass","Package":"signer/tests/signing","Elapsed":0.014}
+{"Time":"2026-11-15T14:11:23.071501923+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_bad_algorithm.json","Output":"--- PASS: TestParseRejectsMalformedTrustStores/trust_bad_algorithm.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.071564011+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_bad_algorithm.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.07157435+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_algorithm_mismatch.json"}
+{"Time":"2026-11-15T14:11:23.071591232+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_algorithm_mismatch.json","Output":"=== RUN   TestParseRejectsMalformedTrustStores/trust_algorithm_mismatch.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.071760586+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_algorithm_mismatch.json","Output":"--- PASS: TestParseRejectsMalformedTrustStores/trust_algorithm_mismatch.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.071787346+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_algorithm_mismatch.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.071801183+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_empty_packages.json"}
+{"Time":"2026-11-15T14:11:23.071806813+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_empty_packages.json","Output":"=== RUN   TestParseRejectsMalformedTrustStores/trust_empty_packages.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.071980953+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_empty_packages.json","Output":"--- PASS: TestParseRejectsMalformedTrustStores/trust_empty_packages.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.071997244+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_empty_packages.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.07201106+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_wildcard.json"}
+{"Time":"2026-11-15T14:11:23.072015779+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_wildcard.json","Output":"=== RUN   TestParseRejectsMalformedTrustStores/trust_wildcard.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.0722769+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_wildcard.json","Output":"--- PASS: TestParseRejectsMalformedTrustStores/trust_wildcard.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.072305474+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_wildcard.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.07227364+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestRemoveKeyRevokesVerification","Output":"--- PASS: TestRemoveKeyRevokesVerification (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.07231383+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_duplicate_package.json"}
+{"Time":"2026-11-15T14:11:23.072316692+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestRemoveKeyRevokesVerification","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.0723191+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_duplicate_package.json","Output":"=== RUN   TestParseRejectsMalformedTrustStores/trust_duplicate_package.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.072324717+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestU14BothBundles"}
+{"Time":"2026-11-15T14:11:23.072329486+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU14BothBundles","Output":"=== RUN   TestU14BothBundles\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.072335337+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestU14BothBundles/ed25519"}
+{"Time":"2026-11-15T14:11:23.072341629+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU14BothBundles/ed25519","Output":"=== RUN   TestU14BothBundles/ed25519\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.072472616+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_duplicate_package.json","Output":"--- PASS: TestParseRejectsMalformedTrustStores/trust_duplicate_package.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.072502042+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_duplicate_package.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.072524214+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_bad_pem.json"}
+{"Time":"2026-11-15T14:11:23.072531709+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_bad_pem.json","Output":"=== RUN   TestParseRejectsMalformedTrustStores/trust_bad_pem.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.07268421+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_bad_pem.json","Output":"--- PASS: TestParseRejectsMalformedTrustStores/trust_bad_pem.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.072698738+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_bad_pem.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.07270503+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_bad_schema.json"}
+{"Time":"2026-11-15T14:11:23.072709658+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_bad_schema.json","Output":"=== RUN   TestParseRejectsMalformedTrustStores/trust_bad_schema.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.072803305+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_bad_schema.json","Output":"--- PASS: TestParseRejectsMalformedTrustStores/trust_bad_schema.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.072818223+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_bad_schema.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.072824104+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_malformed.json"}
+{"Time":"2026-11-15T14:11:23.072828713+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_malformed.json","Output":"=== RUN   TestParseRejectsMalformedTrustStores/trust_malformed.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.072972125+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_malformed.json","Output":"--- PASS: TestParseRejectsMalformedTrustStores/trust_malformed.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.0729852+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_malformed.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.072990911+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_entry_missing_field.json"}
+{"Time":"2026-11-15T14:11:23.073034856+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_entry_missing_field.json","Output":"=== RUN   TestParseRejectsMalformedTrustStores/trust_entry_missing_field.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.073048672+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_entry_missing_field.json","Output":"--- PASS: TestParseRejectsMalformedTrustStores/trust_entry_missing_field.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.073055585+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_entry_missing_field.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.073126961+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_packages_wrong_type.json"}
+{"Time":"2026-11-15T14:11:23.073141609+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_packages_wrong_type.json","Output":"=== RUN   TestParseRejectsMalformedTrustStores/trust_packages_wrong_type.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.07316338+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_packages_wrong_type.json","Output":"--- PASS: TestParseRejectsMalformedTrustStores/trust_packages_wrong_type.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.073171556+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_packages_wrong_type.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.073181515+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_keyid_uppercase.json"}
+{"Time":"2026-11-15T14:11:23.073187516+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_keyid_uppercase.json","Output":"=== RUN   TestParseRejectsMalformedTrustStores/trust_keyid_uppercase.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.073281715+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_keyid_uppercase.json","Output":"--- PASS: TestParseRejectsMalformedTrustStores/trust_keyid_uppercase.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.073298146+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores/trust_keyid_uppercase.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.073308576+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores","Output":"--- PASS: TestParseRejectsMalformedTrustStores (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.073320028+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestParseRejectsMalformedTrustStores","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.07332633+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestFind"}
+{"Time":"2026-11-15T14:11:23.073332181+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestFind","Output":"=== RUN   TestFind\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.073515058+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestFind","Output":"--- PASS: TestFind (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.073526249+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestFind","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.073536018+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestEntryFromPublicPEMRejectsMismatch"}
+{"Time":"2026-11-15T14:11:23.073542039+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestEntryFromPublicPEMRejectsMismatch","Output":"=== RUN   TestEntryFromPublicPEMRejectsMismatch\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.073688076+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestEntryFromPublicPEMRejectsMismatch","Output":"--- PASS: TestEntryFromPublicPEMRejectsMismatch (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.073703165+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestEntryFromPublicPEMRejectsMismatch","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.073709697+07:00","Action":"run","Package":"signer/tests/trust","Test":"TestEmptyStoreGrantsNoTrust"}
+{"Time":"2026-11-15T14:11:23.073714175+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestEmptyStoreGrantsNoTrust","Output":"=== RUN   TestEmptyStoreGrantsNoTrust\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.073780781+07:00","Action":"output","Package":"signer/tests/trust","Test":"TestEmptyStoreGrantsNoTrust","Output":"--- PASS: TestEmptyStoreGrantsNoTrust (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.073797543+07:00","Action":"pass","Package":"signer/tests/trust","Test":"TestEmptyStoreGrantsNoTrust","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.073803374+07:00","Action":"output","Package":"signer/tests/trust","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.074501181+07:00","Action":"output","Package":"signer/tests/trust","Output":"ok  \tsigner/tests/trust\t0.017s\n"}
+{"Time":"2026-11-15T14:11:23.074531208+07:00","Action":"pass","Package":"signer/tests/trust","Elapsed":0.017}
+{"Time":"2026-11-15T14:11:23.075285441+07:00","Action":"output","Package":"signer/tests/sbom","Test":"TestSBOMAllProfiles/ed25519","Output":"--- PASS: TestSBOMAllProfiles/ed25519 (0.01s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.075345725+07:00","Action":"pass","Package":"signer/tests/sbom","Test":"TestSBOMAllProfiles/ed25519","Elapsed":0.01}
+{"Time":"2026-11-15T14:11:23.075355434+07:00","Action":"run","Package":"signer/tests/sbom","Test":"TestSBOMAllProfiles/ecdsa_p256"}
+{"Time":"2026-11-15T14:11:23.075359842+07:00","Action":"output","Package":"signer/tests/sbom","Test":"TestSBOMAllProfiles/ecdsa_p256","Output":"=== RUN   TestSBOMAllProfiles/ecdsa_p256\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.076836246+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU14BothBundles/ed25519","Output":"    precedence_test.go:107: identical signatures: true\n"}
+{"Time":"2026-11-15T14:11:23.077031056+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU14BothBundles/ed25519","Output":"--- PASS: TestU14BothBundles/ed25519 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.077048369+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestU14BothBundles/ed25519","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.077153718+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestU14BothBundles/ecdsa-p256"}
+{"Time":"2026-11-15T14:11:23.077168065+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU14BothBundles/ecdsa-p256","Output":"=== RUN   TestU14BothBundles/ecdsa-p256\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.079574828+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU14BothBundles/ecdsa-p256","Output":"    precedence_test.go:107: identical signatures: false\n"}
+{"Time":"2026-11-15T14:11:23.07965481+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU14BothBundles/ecdsa-p256","Output":"--- PASS: TestU14BothBundles/ecdsa-p256 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.079663697+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestU14BothBundles/ecdsa-p256","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.079674026+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestU14BothBundles/rsa-pss"}
+{"Time":"2026-11-15T14:11:23.079679006+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU14BothBundles/rsa-pss","Output":"=== RUN   TestU14BothBundles/rsa-pss\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.081066319+07:00","Action":"output","Package":"signer/tests/sbom","Test":"TestSBOMAllProfiles/ecdsa_p256","Output":"--- PASS: TestSBOMAllProfiles/ecdsa_p256 (0.01s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.081106475+07:00","Action":"pass","Package":"signer/tests/sbom","Test":"TestSBOMAllProfiles/ecdsa_p256","Elapsed":0.01}
+{"Time":"2026-11-15T14:11:23.081119189+07:00","Action":"run","Package":"signer/tests/sbom","Test":"TestSBOMAllProfiles/rsa_pss_3072"}
+{"Time":"2026-11-15T14:11:23.081125962+07:00","Action":"output","Package":"signer/tests/sbom","Test":"TestSBOMAllProfiles/rsa_pss_3072","Output":"=== RUN   TestSBOMAllProfiles/rsa_pss_3072\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.089646256+07:00","Action":"output","Package":"signer/tests/interoperability","Test":"TestOpenSSL/ecdsa-p256-sha256","Output":"    interop_test.go:99: Go -\u003e OpenSSL and OpenSSL -\u003e Go passed\n"}
+{"Time":"2026-11-15T14:11:23.089773358+07:00","Action":"output","Package":"signer/tests/interoperability","Test":"TestOpenSSL/ecdsa-p256-sha256","Output":"--- PASS: TestOpenSSL/ecdsa-p256-sha256 (0.02s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.089788627+07:00","Action":"pass","Package":"signer/tests/interoperability","Test":"TestOpenSSL/ecdsa-p256-sha256","Elapsed":0.02}
+{"Time":"2026-11-15T14:11:23.08982201+07:00","Action":"run","Package":"signer/tests/interoperability","Test":"TestOpenSSL/ed25519"}
+{"Time":"2026-11-15T14:11:23.089830486+07:00","Action":"output","Package":"signer/tests/interoperability","Test":"TestOpenSSL/ed25519","Output":"=== RUN   TestOpenSSL/ed25519\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.093687031+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU14BothBundles/rsa-pss","Output":"    precedence_test.go:107: identical signatures: false\n"}
+{"Time":"2026-11-15T14:11:23.094037519+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU14BothBundles/rsa-pss","Output":"--- PASS: TestU14BothBundles/rsa-pss (0.01s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.094066393+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestU14BothBundles/rsa-pss","Elapsed":0.01}
+{"Time":"2026-11-15T14:11:23.094088405+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU14BothBundles","Output":"--- PASS: TestU14BothBundles (0.02s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.094095769+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestU14BothBundles","Elapsed":0.02}
+{"Time":"2026-11-15T14:11:23.094102131+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses"}
+{"Time":"2026-11-15T14:11:23.094110698+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses","Output":"=== RUN   TestU10MalformedBundleStatuses\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.094120456+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_duplicate_field.json"}
+{"Time":"2026-11-15T14:11:23.094125927+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_duplicate_field.json","Output":"=== RUN   TestU10MalformedBundleStatuses/bundle_duplicate_field.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.094357155+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_duplicate_field.json","Output":"--- PASS: TestU10MalformedBundleStatuses/bundle_duplicate_field.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.094375289+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_duplicate_field.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.094388905+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_b64_bad_char.json"}
+{"Time":"2026-11-15T14:11:23.094395227+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_b64_bad_char.json","Output":"=== RUN   TestU10MalformedBundleStatuses/bundle_b64_bad_char.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.095383434+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_b64_bad_char.json","Output":"--- PASS: TestU10MalformedBundleStatuses/bundle_b64_bad_char.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.095404965+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_b64_bad_char.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.09541304+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_b64_unpadded.json"}
+{"Time":"2026-11-15T14:11:23.095418371+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_b64_unpadded.json","Output":"=== RUN   TestU10MalformedBundleStatuses/bundle_b64_unpadded.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.095425855+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_b64_unpadded.json","Output":"--- PASS: TestU10MalformedBundleStatuses/bundle_b64_unpadded.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.095443889+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_b64_unpadded.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.09544966+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_b64_whitespace.json"}
+{"Time":"2026-11-15T14:11:23.09545516+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_b64_whitespace.json","Output":"=== RUN   TestU10MalformedBundleStatuses/bundle_b64_whitespace.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.095463847+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_b64_whitespace.json","Output":"--- PASS: TestU10MalformedBundleStatuses/bundle_b64_whitespace.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.095469508+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_b64_whitespace.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.095474357+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_extra_field.json"}
+{"Time":"2026-11-15T14:11:23.095482562+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_extra_field.json","Output":"=== RUN   TestU10MalformedBundleStatuses/bundle_extra_field.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.09631848+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_extra_field.json","Output":"--- PASS: TestU10MalformedBundleStatuses/bundle_extra_field.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.096399413+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_extra_field.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.096614602+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_oversize.json"}
+{"Time":"2026-11-15T14:11:23.096635001+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_oversize.json","Output":"=== RUN   TestU10MalformedBundleStatuses/bundle_oversize.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.098405143+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_oversize.json","Output":"--- PASS: TestU10MalformedBundleStatuses/bundle_oversize.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.098452243+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses/bundle_oversize.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.098467421+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses","Output":"--- PASS: TestU10MalformedBundleStatuses (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.098481188+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestU10MalformedBundleStatuses","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.098488221+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestVerifyOKForAllProfilesAndArtifactKinds"}
+{"Time":"2026-11-15T14:11:23.098493561+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestVerifyOKForAllProfilesAndArtifactKinds","Output":"=== RUN   TestVerifyOKForAllProfilesAndArtifactKinds\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.098515513+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestVerifyOKForAllProfilesAndArtifactKinds/ed25519"}
+{"Time":"2026-11-15T14:11:23.098521664+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestVerifyOKForAllProfilesAndArtifactKinds/ed25519","Output":"=== RUN   TestVerifyOKForAllProfilesAndArtifactKinds/ed25519\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.102231301+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestVerifyOKForAllProfilesAndArtifactKinds/ed25519","Output":"--- PASS: TestVerifyOKForAllProfilesAndArtifactKinds/ed25519 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.102289121+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestVerifyOKForAllProfilesAndArtifactKinds/ed25519","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.10230443+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestVerifyOKForAllProfilesAndArtifactKinds/ecdsa-p256"}
+{"Time":"2026-11-15T14:11:23.102310481+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestVerifyOKForAllProfilesAndArtifactKinds/ecdsa-p256","Output":"=== RUN   TestVerifyOKForAllProfilesAndArtifactKinds/ecdsa-p256\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.105958121+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestVerifyOKForAllProfilesAndArtifactKinds/ecdsa-p256","Output":"--- PASS: TestVerifyOKForAllProfilesAndArtifactKinds/ecdsa-p256 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.106064383+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestVerifyOKForAllProfilesAndArtifactKinds/ecdsa-p256","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.106087617+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestVerifyOKForAllProfilesAndArtifactKinds/rsa-pss"}
+{"Time":"2026-11-15T14:11:23.106094961+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestVerifyOKForAllProfilesAndArtifactKinds/rsa-pss","Output":"=== RUN   TestVerifyOKForAllProfilesAndArtifactKinds/rsa-pss\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.107655754+07:00","Action":"output","Package":"signer/tests/sbom","Test":"TestSBOMAllProfiles/rsa_pss_3072","Output":"--- PASS: TestSBOMAllProfiles/rsa_pss_3072 (0.03s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.107692654+07:00","Action":"pass","Package":"signer/tests/sbom","Test":"TestSBOMAllProfiles/rsa_pss_3072","Elapsed":0.03}
+{"Time":"2026-11-15T14:11:23.107701882+07:00","Action":"output","Package":"signer/tests/sbom","Test":"TestSBOMAllProfiles","Output":"--- PASS: TestSBOMAllProfiles (0.04s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.107706941+07:00","Action":"pass","Package":"signer/tests/sbom","Test":"TestSBOMAllProfiles","Elapsed":0.04}
+{"Time":"2026-11-15T14:11:23.107718253+07:00","Action":"run","Package":"signer/tests/sbom","Test":"TestInvalidSBOM"}
+{"Time":"2026-11-15T14:11:23.10772226+07:00","Action":"output","Package":"signer/tests/sbom","Test":"TestInvalidSBOM","Output":"=== RUN   TestInvalidSBOM\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.107877936+07:00","Action":"output","Package":"signer/tests/sbom","Test":"TestInvalidSBOM","Output":"--- PASS: TestInvalidSBOM (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.107888977+07:00","Action":"pass","Package":"signer/tests/sbom","Test":"TestInvalidSBOM","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.107898465+07:00","Action":"run","Package":"signer/tests/sbom","Test":"TestAuthenticatedInvalidSchema"}
+{"Time":"2026-11-15T14:11:23.107902773+07:00","Action":"output","Package":"signer/tests/sbom","Test":"TestAuthenticatedInvalidSchema","Output":"=== RUN   TestAuthenticatedInvalidSchema\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.110939431+07:00","Action":"output","Package":"signer/tests/sbom","Test":"TestAuthenticatedInvalidSchema","Output":"--- PASS: TestAuthenticatedInvalidSchema (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.111151936+07:00","Action":"pass","Package":"signer/tests/sbom","Test":"TestAuthenticatedInvalidSchema","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.111176262+07:00","Action":"output","Package":"signer/tests/sbom","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.111542789+07:00","Action":"output","Package":"signer/tests/sbom","Output":"ok  \tsigner/tests/sbom\t0.055s\n"}
+{"Time":"2026-11-15T14:11:23.111562586+07:00","Action":"pass","Package":"signer/tests/sbom","Elapsed":0.055}
+{"Time":"2026-11-15T14:11:23.111831436+07:00","Action":"output","Package":"signer/tests/interoperability","Test":"TestOpenSSL/ed25519","Output":"    interop_test.go:99: Go -\u003e OpenSSL and OpenSSL -\u003e Go passed\n"}
+{"Time":"2026-11-15T14:11:23.112027959+07:00","Action":"output","Package":"signer/tests/interoperability","Test":"TestOpenSSL/ed25519","Output":"--- PASS: TestOpenSSL/ed25519 (0.02s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.112046985+07:00","Action":"pass","Package":"signer/tests/interoperability","Test":"TestOpenSSL/ed25519","Elapsed":0.02}
+{"Time":"2026-11-15T14:11:23.112063346+07:00","Action":"output","Package":"signer/tests/interoperability","Test":"TestOpenSSL","Output":"--- PASS: TestOpenSSL (0.07s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.11207048+07:00","Action":"pass","Package":"signer/tests/interoperability","Test":"TestOpenSSL","Elapsed":0.07}
+{"Time":"2026-11-15T14:11:23.112075229+07:00","Action":"output","Package":"signer/tests/interoperability","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.113421287+07:00","Action":"output","Package":"signer/tests/interoperability","Output":"ok  \tsigner/tests/interoperability\t0.080s\n"}
+{"Time":"2026-11-15T14:11:23.113451975+07:00","Action":"pass","Package":"signer/tests/interoperability","Elapsed":0.08}
+{"Time":"2026-11-15T14:11:23.125245385+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestVerifyOKForAllProfilesAndArtifactKinds/rsa-pss","Output":"--- PASS: TestVerifyOKForAllProfilesAndArtifactKinds/rsa-pss (0.02s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.125308545+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestVerifyOKForAllProfilesAndArtifactKinds/rsa-pss","Elapsed":0.02}
+{"Time":"2026-11-15T14:11:23.125321179+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestVerifyOKForAllProfilesAndArtifactKinds","Output":"--- PASS: TestVerifyOKForAllProfilesAndArtifactKinds (0.03s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.125329685+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestVerifyOKForAllProfilesAndArtifactKinds","Elapsed":0.03}
+{"Time":"2026-11-15T14:11:23.125341597+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestVerifyFixtureBundles"}
+{"Time":"2026-11-15T14:11:23.12534848+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestVerifyFixtureBundles","Output":"=== RUN   TestVerifyFixtureBundles\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.125370983+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestVerifyFixtureBundles/ed25519"}
+{"Time":"2026-11-15T14:11:23.125379529+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestVerifyFixtureBundles/ed25519","Output":"=== RUN   TestVerifyFixtureBundles/ed25519\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.125912742+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestVerifyFixtureBundles/ed25519","Output":"--- PASS: TestVerifyFixtureBundles/ed25519 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.125931217+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestVerifyFixtureBundles/ed25519","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.125939142+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestVerifyFixtureBundles/ecdsa-p256"}
+{"Time":"2026-11-15T14:11:23.125944092+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestVerifyFixtureBundles/ecdsa-p256","Output":"=== RUN   TestVerifyFixtureBundles/ecdsa-p256\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.126487133+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestVerifyFixtureBundles/ecdsa-p256","Output":"--- PASS: TestVerifyFixtureBundles/ecdsa-p256 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.126502242+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestVerifyFixtureBundles/ecdsa-p256","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.126508263+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestVerifyFixtureBundles/rsa-pss"}
+{"Time":"2026-11-15T14:11:23.126513283+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestVerifyFixtureBundles/rsa-pss","Output":"=== RUN   TestVerifyFixtureBundles/rsa-pss\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.127203075+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestVerifyFixtureBundles/rsa-pss","Output":"--- PASS: TestVerifyFixtureBundles/rsa-pss (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.127220127+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestVerifyFixtureBundles/rsa-pss","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.127227411+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestVerifyFixtureBundles","Output":"--- PASS: TestVerifyFixtureBundles (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.127233342+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestVerifyFixtureBundles","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.127239193+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestInputErrors"}
+{"Time":"2026-11-15T14:11:23.127243752+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestInputErrors","Output":"=== RUN   TestInputErrors\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.127319967+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestInputErrors/missing_artifact"}
+{"Time":"2026-11-15T14:11:23.127329625+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestInputErrors/missing_artifact","Output":"=== RUN   TestInputErrors/missing_artifact\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.127423412+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestInputErrors/missing_artifact","Output":"--- PASS: TestInputErrors/missing_artifact (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.127434322+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestInputErrors/missing_artifact","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.127438861+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestInputErrors/missing_bundle"}
+{"Time":"2026-11-15T14:11:23.127442207+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestInputErrors/missing_bundle","Output":"=== RUN   TestInputErrors/missing_bundle\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.12757985+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestInputErrors/missing_bundle","Output":"--- PASS: TestInputErrors/missing_bundle (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.12759003+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestInputErrors/missing_bundle","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.127594408+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestInputErrors/missing_trust_store"}
+{"Time":"2026-11-15T14:11:23.127597875+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestInputErrors/missing_trust_store","Output":"=== RUN   TestInputErrors/missing_trust_store\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.127739393+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestInputErrors/missing_trust_store","Output":"--- PASS: TestInputErrors/missing_trust_store (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.127746988+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestInputErrors/missing_trust_store","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.127839514+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestInputErrors","Output":"--- PASS: TestInputErrors (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.127851005+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestInputErrors","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.127917221+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestArtifactTampering"}
+{"Time":"2026-11-15T14:11:23.127923313+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestArtifactTampering","Output":"=== RUN   TestArtifactTampering\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.127929514+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestArtifactTampering/binary_bad_byte.bin"}
+{"Time":"2026-11-15T14:11:23.127944884+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestArtifactTampering/binary_bad_byte.bin","Output":"=== RUN   TestArtifactTampering/binary_bad_byte.bin\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.128764795+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestArtifactTampering/binary_bad_byte.bin","Output":"--- PASS: TestArtifactTampering/binary_bad_byte.bin (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.128803929+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestArtifactTampering/binary_bad_byte.bin","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.128810852+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestArtifactTampering/binary_truncated.bin"}
+{"Time":"2026-11-15T14:11:23.128819739+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestArtifactTampering/binary_truncated.bin","Output":"=== RUN   TestArtifactTampering/binary_truncated.bin\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.129609754+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestArtifactTampering/binary_truncated.bin","Output":"--- PASS: TestArtifactTampering/binary_truncated.bin (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.129637477+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestArtifactTampering/binary_truncated.bin","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.129648317+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestArtifactTampering/binary_extended.bin"}
+{"Time":"2026-11-15T14:11:23.129653166+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestArtifactTampering/binary_extended.bin","Output":"=== RUN   TestArtifactTampering/binary_extended.bin\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.130232838+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestArtifactTampering/binary_extended.bin","Output":"--- PASS: TestArtifactTampering/binary_extended.bin (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.130251042+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestArtifactTampering/binary_extended.bin","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.130258587+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestArtifactTampering","Output":"--- PASS: TestArtifactTampering (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.130263316+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestArtifactTampering","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.130267173+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestManifestTampering"}
+{"Time":"2026-11-15T14:11:23.130270539+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestManifestTampering","Output":"=== RUN   TestManifestTampering\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.130858401+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestManifestTampering","Output":"--- PASS: TestManifestTampering (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.130877467+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestManifestTampering","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.130885542+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestSignatureTampering"}
+{"Time":"2026-11-15T14:11:23.130889871+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSignatureTampering","Output":"=== RUN   TestSignatureTampering\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.131240036+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSignatureTampering","Output":"--- PASS: TestSignatureTampering (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.131251768+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestSignatureTampering","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.131257769+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors"}
+{"Time":"2026-11-15T14:11:23.131275523+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors","Output":"=== RUN   TestSignatureLengthAndDomainErrors\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.131285743+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors/bundle_ecdsa_sig_r_zero.json"}
+{"Time":"2026-11-15T14:11:23.131291624+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors/bundle_ecdsa_sig_r_zero.json","Output":"=== RUN   TestSignatureLengthAndDomainErrors/bundle_ecdsa_sig_r_zero.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.131641273+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors/bundle_ecdsa_sig_r_zero.json","Output":"--- PASS: TestSignatureLengthAndDomainErrors/bundle_ecdsa_sig_r_zero.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.131661691+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors/bundle_ecdsa_sig_r_zero.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.131670739+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors/bundle_ed25519_sig_short.json"}
+{"Time":"2026-11-15T14:11:23.13167653+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors/bundle_ed25519_sig_short.json","Output":"=== RUN   TestSignatureLengthAndDomainErrors/bundle_ed25519_sig_short.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.13195564+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors/bundle_ed25519_sig_short.json","Output":"--- PASS: TestSignatureLengthAndDomainErrors/bundle_ed25519_sig_short.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.131970207+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors/bundle_ed25519_sig_short.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.131980677+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors/bundle_rsa_sig_short.json"}
+{"Time":"2026-11-15T14:11:23.131988041+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors/bundle_rsa_sig_short.json","Output":"=== RUN   TestSignatureLengthAndDomainErrors/bundle_rsa_sig_short.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.132625792+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors/bundle_rsa_sig_short.json","Output":"--- PASS: TestSignatureLengthAndDomainErrors/bundle_rsa_sig_short.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.13264546+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors/bundle_rsa_sig_short.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.132651091+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors/bundle_empty_signature.json"}
+{"Time":"2026-11-15T14:11:23.132654637+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors/bundle_empty_signature.json","Output":"=== RUN   TestSignatureLengthAndDomainErrors/bundle_empty_signature.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.132995004+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors/bundle_empty_signature.json","Output":"--- PASS: TestSignatureLengthAndDomainErrors/bundle_empty_signature.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.133004472+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors/bundle_empty_signature.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.133009712+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors","Output":"--- PASS: TestSignatureLengthAndDomainErrors (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.133022606+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestSignatureLengthAndDomainErrors","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.133027325+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestEmptyTrustStore"}
+{"Time":"2026-11-15T14:11:23.133030391+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestEmptyTrustStore","Output":"=== RUN   TestEmptyTrustStore\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.133252954+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestEmptyTrustStore","Output":"--- PASS: TestEmptyTrustStore (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.133268914+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestEmptyTrustStore","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.133281789+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestMinimalTrustStoreSuffices"}
+{"Time":"2026-11-15T14:11:23.133286477+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestMinimalTrustStoreSuffices","Output":"=== RUN   TestMinimalTrustStoreSuffices\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.133699432+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestMinimalTrustStoreSuffices","Output":"--- PASS: TestMinimalTrustStoreSuffices (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.133712637+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestMinimalTrustStoreSuffices","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.133718648+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestKeyNotAllowedForPackage"}
+{"Time":"2026-11-15T14:11:23.133722125+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestKeyNotAllowedForPackage","Output":"=== RUN   TestKeyNotAllowedForPackage\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.134986727+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestKeyNotAllowedForPackage","Output":"--- PASS: TestKeyNotAllowedForPackage (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.135011374+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestKeyNotAllowedForPackage","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.135017035+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestMetadataVersionMismatch"}
+{"Time":"2026-11-15T14:11:23.135021473+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestMetadataVersionMismatch","Output":"=== RUN   TestMetadataVersionMismatch\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.135779954+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestMetadataVersionMismatch","Output":"--- PASS: TestMetadataVersionMismatch (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.135794882+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestMetadataVersionMismatch","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.13579887+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestMetadataPackageMismatch"}
+{"Time":"2026-11-15T14:11:23.135802466+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestMetadataPackageMismatch","Output":"=== RUN   TestMetadataPackageMismatch\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.136097296+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestMetadataPackageMismatch","Output":"--- PASS: TestMetadataPackageMismatch (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.136104981+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestMetadataPackageMismatch","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.136111523+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestRenamedArtifact"}
+{"Time":"2026-11-15T14:11:23.136145087+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestRenamedArtifact","Output":"=== RUN   TestRenamedArtifact\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.13688884+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestRenamedArtifact","Output":"--- PASS: TestRenamedArtifact (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.136931942+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestRenamedArtifact","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.136939877+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestUnsupportedAlgorithm"}
+{"Time":"2026-11-15T14:11:23.136943594+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestUnsupportedAlgorithm","Output":"=== RUN   TestUnsupportedAlgorithm\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.137261077+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestUnsupportedAlgorithm","Output":"--- PASS: TestUnsupportedAlgorithm (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.137275224+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestUnsupportedAlgorithm","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.137279893+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestSigningWithUntrustedKey"}
+{"Time":"2026-11-15T14:11:23.137282979+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSigningWithUntrustedKey","Output":"=== RUN   TestSigningWithUntrustedKey\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.137290212+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestSigningWithUntrustedKey/bundle_ed25519_other_key.json"}
+{"Time":"2026-11-15T14:11:23.137293699+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSigningWithUntrustedKey/bundle_ed25519_other_key.json","Output":"=== RUN   TestSigningWithUntrustedKey/bundle_ed25519_other_key.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.137608827+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSigningWithUntrustedKey/bundle_ed25519_other_key.json","Output":"--- PASS: TestSigningWithUntrustedKey/bundle_ed25519_other_key.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.137622924+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestSigningWithUntrustedKey/bundle_ed25519_other_key.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.137627673+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestSigningWithUntrustedKey/bundle_ecdsa_p256_sha256_other_key.json"}
+{"Time":"2026-11-15T14:11:23.137630929+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSigningWithUntrustedKey/bundle_ecdsa_p256_sha256_other_key.json","Output":"=== RUN   TestSigningWithUntrustedKey/bundle_ecdsa_p256_sha256_other_key.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.137940729+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSigningWithUntrustedKey/bundle_ecdsa_p256_sha256_other_key.json","Output":"--- PASS: TestSigningWithUntrustedKey/bundle_ecdsa_p256_sha256_other_key.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.137954946+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestSigningWithUntrustedKey/bundle_ecdsa_p256_sha256_other_key.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.137960397+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestSigningWithUntrustedKey/bundle_rsa_pss_sha256_other_key.json"}
+{"Time":"2026-11-15T14:11:23.137963803+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSigningWithUntrustedKey/bundle_rsa_pss_sha256_other_key.json","Output":"=== RUN   TestSigningWithUntrustedKey/bundle_rsa_pss_sha256_other_key.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.138308216+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSigningWithUntrustedKey/bundle_rsa_pss_sha256_other_key.json","Output":"--- PASS: TestSigningWithUntrustedKey/bundle_rsa_pss_sha256_other_key.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.138324307+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestSigningWithUntrustedKey/bundle_rsa_pss_sha256_other_key.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.138331681+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSigningWithUntrustedKey","Output":"--- PASS: TestSigningWithUntrustedKey (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.138351539+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestSigningWithUntrustedKey","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.13835774+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestReformattedBundlesStillVerify"}
+{"Time":"2026-11-15T14:11:23.138362429+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestReformattedBundlesStillVerify","Output":"=== RUN   TestReformattedBundlesStillVerify\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.13836808+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestReformattedBundlesStillVerify/bundle_reordered.json"}
+{"Time":"2026-11-15T14:11:23.138391655+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestReformattedBundlesStillVerify/bundle_reordered.json","Output":"=== RUN   TestReformattedBundlesStillVerify/bundle_reordered.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.138667809+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestReformattedBundlesStillVerify/bundle_reordered.json","Output":"--- PASS: TestReformattedBundlesStillVerify/bundle_reordered.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.138681765+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestReformattedBundlesStillVerify/bundle_reordered.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.138687246+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestReformattedBundlesStillVerify/bundle_pretty.json"}
+{"Time":"2026-11-15T14:11:23.138696093+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestReformattedBundlesStillVerify/bundle_pretty.json","Output":"=== RUN   TestReformattedBundlesStillVerify/bundle_pretty.json\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.139163652+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestReformattedBundlesStillVerify/bundle_pretty.json","Output":"--- PASS: TestReformattedBundlesStillVerify/bundle_pretty.json (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.139176837+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestReformattedBundlesStillVerify/bundle_pretty.json","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.139181867+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestReformattedBundlesStillVerify","Output":"--- PASS: TestReformattedBundlesStillVerify (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.139186596+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestReformattedBundlesStillVerify","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.139190103+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestSecondSignatureVerifies"}
+{"Time":"2026-11-15T14:11:23.139193289+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSecondSignatureVerifies","Output":"=== RUN   TestSecondSignatureVerifies\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.139554024+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSecondSignatureVerifies","Output":"--- PASS: TestSecondSignatureVerifies (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.139569643+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestSecondSignatureVerifies","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.139576236+07:00","Action":"run","Package":"signer/tests/verifier","Test":"TestSignThenVerifyChangedVersionMetadata"}
+{"Time":"2026-11-15T14:11:23.139581346+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSignThenVerifyChangedVersionMetadata","Output":"=== RUN   TestSignThenVerifyChangedVersionMetadata\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.140755304+07:00","Action":"output","Package":"signer/tests/verifier","Test":"TestSignThenVerifyChangedVersionMetadata","Output":"--- PASS: TestSignThenVerifyChangedVersionMetadata (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.14079518+07:00","Action":"pass","Package":"signer/tests/verifier","Test":"TestSignThenVerifyChangedVersionMetadata","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.140818584+07:00","Action":"output","Package":"signer/tests/verifier","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.142027551+07:00","Action":"output","Package":"signer/tests/verifier","Output":"ok  \tsigner/tests/verifier\t0.084s\n"}
+{"Time":"2026-11-15T14:11:23.142061946+07:00","Action":"pass","Package":"signer/tests/verifier","Elapsed":0.084}
+{"Time":"2026-11-15T14:11:23.191044765+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestFullFlowForAllAlgorithms/rsa-pss-sha256","Output":"--- PASS: TestFullFlowForAllAlgorithms/rsa-pss-sha256 (0.14s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.191104008+07:00","Action":"pass","Package":"signer/tests/integration","Test":"TestFullFlowForAllAlgorithms/rsa-pss-sha256","Elapsed":0.14}
+{"Time":"2026-11-15T14:11:23.191114698+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestFullFlowForAllAlgorithms","Output":"--- PASS: TestFullFlowForAllAlgorithms (0.15s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.191120008+07:00","Action":"pass","Package":"signer/tests/integration","Test":"TestFullFlowForAllAlgorithms","Elapsed":0.15}
+{"Time":"2026-11-15T14:11:23.19112624+07:00","Action":"run","Package":"signer/tests/integration","Test":"TestSignRejectsBadInputs"}
+{"Time":"2026-11-15T14:11:23.191130398+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestSignRejectsBadInputs","Output":"=== RUN   TestSignRejectsBadInputs\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.191926099+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestSignRejectsBadInputs","Output":"--- PASS: TestSignRejectsBadInputs (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.191950065+07:00","Action":"pass","Package":"signer/tests/integration","Test":"TestSignRejectsBadInputs","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.191956036+07:00","Action":"run","Package":"signer/tests/integration","Test":"TestVerifyTamperedArtifactExitCodes"}
+{"Time":"2026-11-15T14:11:23.191960084+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestVerifyTamperedArtifactExitCodes","Output":"=== RUN   TestVerifyTamperedArtifactExitCodes\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.193162379+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestVerifyTamperedArtifactExitCodes","Output":"--- PASS: TestVerifyTamperedArtifactExitCodes (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.193184281+07:00","Action":"pass","Package":"signer/tests/integration","Test":"TestVerifyTamperedArtifactExitCodes","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.193190803+07:00","Action":"run","Package":"signer/tests/integration","Test":"TestTrustCommands"}
+{"Time":"2026-11-15T14:11:23.19319462+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestTrustCommands","Output":"=== RUN   TestTrustCommands\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.194582169+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestTrustCommands","Output":"--- PASS: TestTrustCommands (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.194634328+07:00","Action":"pass","Package":"signer/tests/integration","Test":"TestTrustCommands","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.194642785+07:00","Action":"run","Package":"signer/tests/integration","Test":"TestVerifyUsageErrors"}
+{"Time":"2026-11-15T14:11:23.194648606+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestVerifyUsageErrors","Output":"=== RUN   TestVerifyUsageErrors\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.194662191+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestVerifyUsageErrors","Output":"--- PASS: TestVerifyUsageErrors (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.194685456+07:00","Action":"pass","Package":"signer/tests/integration","Test":"TestVerifyUsageErrors","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.194717166+07:00","Action":"run","Package":"signer/tests/integration","Test":"TestBinaryContract"}
+{"Time":"2026-11-15T14:11:23.194736683+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestBinaryContract","Output":"=== RUN   TestBinaryContract\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.222443581+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestGenerateAndSaveRoundtrip/rsa-pss-sha256","Output":"--- PASS: TestGenerateAndSaveRoundtrip/rsa-pss-sha256 (0.16s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.222489478+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestGenerateAndSaveRoundtrip/rsa-pss-sha256","Elapsed":0.16}
+{"Time":"2026-11-15T14:11:23.222497763+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestGenerateAndSaveRoundtrip/ecdsa-p256-sha256"}
+{"Time":"2026-11-15T14:11:23.222501741+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestGenerateAndSaveRoundtrip/ecdsa-p256-sha256","Output":"=== RUN   TestGenerateAndSaveRoundtrip/ecdsa-p256-sha256\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.222993341+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestGenerateAndSaveRoundtrip/ecdsa-p256-sha256","Output":"--- PASS: TestGenerateAndSaveRoundtrip/ecdsa-p256-sha256 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.223012728+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestGenerateAndSaveRoundtrip/ecdsa-p256-sha256","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.223017908+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestGenerateAndSaveRoundtrip/ed25519"}
+{"Time":"2026-11-15T14:11:23.223021525+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestGenerateAndSaveRoundtrip/ed25519","Output":"=== RUN   TestGenerateAndSaveRoundtrip/ed25519\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.223397227+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestGenerateAndSaveRoundtrip/ed25519","Output":"--- PASS: TestGenerateAndSaveRoundtrip/ed25519 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.223419419+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestGenerateAndSaveRoundtrip/ed25519","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.223427635+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestGenerateAndSaveRoundtrip","Output":"--- PASS: TestGenerateAndSaveRoundtrip (0.16s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.223434017+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestGenerateAndSaveRoundtrip","Elapsed":0.16}
+{"Time":"2026-11-15T14:11:23.223442312+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestGenerateRejectsExistingFiles"}
+{"Time":"2026-11-15T14:11:23.223447051+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestGenerateRejectsExistingFiles","Output":"=== RUN   TestGenerateRejectsExistingFiles\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.224083312+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestGenerateRejectsExistingFiles","Output":"--- PASS: TestGenerateRejectsExistingFiles (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.22410352+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestGenerateRejectsExistingFiles","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.224109401+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestFingerprintStableAcrossPEMLineEndings"}
+{"Time":"2026-11-15T14:11:23.224115072+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestFingerprintStableAcrossPEMLineEndings","Output":"=== RUN   TestFingerprintStableAcrossPEMLineEndings\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.224364235+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestFingerprintStableAcrossPEMLineEndings","Output":"--- PASS: TestFingerprintStableAcrossPEMLineEndings (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.224380847+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestFingerprintStableAcrossPEMLineEndings","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.224398931+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys"}
+{"Time":"2026-11-15T14:11:23.224402638+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys","Output":"=== RUN   TestLoadPrivateRejectsBadKeys\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.224407878+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys/rsa_2048.key.pem"}
+{"Time":"2026-11-15T14:11:23.224411315+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys/rsa_2048.key.pem","Output":"=== RUN   TestLoadPrivateRejectsBadKeys/rsa_2048.key.pem\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.224926457+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys/rsa_2048.key.pem","Output":"--- PASS: TestLoadPrivateRejectsBadKeys/rsa_2048.key.pem (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.224942748+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys/rsa_2048.key.pem","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.224950893+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys/ec_p384.key.pem"}
+{"Time":"2026-11-15T14:11:23.224955973+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys/ec_p384.key.pem","Output":"=== RUN   TestLoadPrivateRejectsBadKeys/ec_p384.key.pem\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.227378739+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys/ec_p384.key.pem","Output":"--- PASS: TestLoadPrivateRejectsBadKeys/ec_p384.key.pem (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.227435197+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys/ec_p384.key.pem","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.227446558+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys/legacy_pkcs1.key.pem"}
+{"Time":"2026-11-15T14:11:23.227451077+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys/legacy_pkcs1.key.pem","Output":"=== RUN   TestLoadPrivateRejectsBadKeys/legacy_pkcs1.key.pem\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.227531219+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys/legacy_pkcs1.key.pem","Output":"--- PASS: TestLoadPrivateRejectsBadKeys/legacy_pkcs1.key.pem (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.227550004+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys/legacy_pkcs1.key.pem","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.227558661+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys/corrupted.key.pem"}
+{"Time":"2026-11-15T14:11:23.227562989+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys/corrupted.key.pem","Output":"=== RUN   TestLoadPrivateRejectsBadKeys/corrupted.key.pem\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.22762648+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys/corrupted.key.pem","Output":"--- PASS: TestLoadPrivateRejectsBadKeys/corrupted.key.pem (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.227638292+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys/corrupted.key.pem","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.227846618+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys","Output":"--- PASS: TestLoadPrivateRejectsBadKeys (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.227861266+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestLoadPrivateRejectsBadKeys","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.227867868+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestLoadPublicRejectsBadKeys"}
+{"Time":"2026-11-15T14:11:23.227887536+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestLoadPublicRejectsBadKeys","Output":"=== RUN   TestLoadPublicRejectsBadKeys\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.228008696+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestLoadPublicRejectsBadKeys","Output":"--- PASS: TestLoadPublicRejectsBadKeys (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.228022152+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestLoadPublicRejectsBadKeys","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.228029486+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestPEMLabels"}
+{"Time":"2026-11-15T14:11:23.228033203+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestPEMLabels","Output":"=== RUN   TestPEMLabels\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.228040506+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestPEMLabels","Output":"--- PASS: TestPEMLabels (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.228085011+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestPEMLabels","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.228093908+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestRejectMultiplePEMBlocksIncludingMalformedPrefix"}
+{"Time":"2026-11-15T14:11:23.228097144+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestRejectMultiplePEMBlocksIncludingMalformedPrefix","Output":"=== RUN   TestRejectMultiplePEMBlocksIncludingMalformedPrefix\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.228200821+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestRejectMultiplePEMBlocksIncludingMalformedPrefix","Output":"--- PASS: TestRejectMultiplePEMBlocksIncludingMalformedPrefix (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.228215349+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestRejectMultiplePEMBlocksIncludingMalformedPrefix","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.228222071+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestRejectInvalidKeyParameters"}
+{"Time":"2026-11-15T14:11:23.228227281+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestRejectInvalidKeyParameters","Output":"=== RUN   TestRejectInvalidKeyParameters\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.228372893+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestRejectInvalidKeyParameters","Output":"--- PASS: TestRejectInvalidKeyParameters (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.228384755+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestRejectInvalidKeyParameters","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.228388913+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestRSARejectsWrongPSSSalt"}
+{"Time":"2026-11-15T14:11:23.22839221+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestRSARejectsWrongPSSSalt","Output":"=== RUN   TestRSARejectsWrongPSSSalt\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.23565538+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestRSARejectsWrongPSSSalt","Output":"--- PASS: TestRSARejectsWrongPSSSalt (0.01s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.235774496+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestRSARejectsWrongPSSSalt","Elapsed":0.01}
+{"Time":"2026-11-15T14:11:23.235791528+07:00","Action":"run","Package":"signer/tests/crypto","Test":"TestECDSAHighSAccepted"}
+{"Time":"2026-11-15T14:11:23.235796367+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestECDSAHighSAccepted","Output":"=== RUN   TestECDSAHighSAccepted\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.236171976+07:00","Action":"output","Package":"signer/tests/crypto","Test":"TestECDSAHighSAccepted","Output":"--- PASS: TestECDSAHighSAccepted (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.236192345+07:00","Action":"pass","Package":"signer/tests/crypto","Test":"TestECDSAHighSAccepted","Elapsed":0}
+{"Time":"2026-11-15T14:11:23.236218845+07:00","Action":"output","Package":"signer/tests/crypto","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.237596798+07:00","Action":"output","Package":"signer/tests/crypto","Output":"ok  \tsigner/tests/crypto\t0.210s\n"}
+{"Time":"2026-11-15T14:11:23.237685686+07:00","Action":"pass","Package":"signer/tests/crypto","Elapsed":0.211}
+{"Time":"2026-11-15T14:11:23.894875751+07:00","Action":"output","Package":"signer/tests/integration","Test":"TestBinaryContract","Output":"--- PASS: TestBinaryContract (0.70s)\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.894934884+07:00","Action":"pass","Package":"signer/tests/integration","Test":"TestBinaryContract","Elapsed":0.7}
+{"Time":"2026-11-15T14:11:23.894944923+07:00","Action":"output","Package":"signer/tests/integration","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-15T14:11:23.896224068+07:00","Action":"output","Package":"signer/tests/integration","Output":"ok  \tsigner/tests/integration\t0.863s\n"}
+{"Time":"2026-11-15T14:11:23.896250287+07:00","Action":"pass","Package":"signer/tests/integration","Elapsed":0.863}
