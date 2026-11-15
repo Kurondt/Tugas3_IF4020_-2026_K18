@@ -3,16 +3,17 @@ package signing
 import (
 	"crypto/sha256"
 	"encoding/hex"
-	"errors"
-	"io"
-	"os"
 	"path/filepath"
 
 	"signer/internal/bundle"
-	signcrypto "signer/internal/crypto"
+	"signer/internal/contract"
+	sigcrypto "signer/internal/crypto"
+	"signer/internal/fileio"
 	"signer/internal/keys"
 	"signer/internal/manifest"
 )
+
+var ErrNotImplemented = contract.ErrNotImplemented
 
 type Result struct {
 	BundlePath    string
@@ -20,87 +21,66 @@ type Result struct {
 	ManifestBytes []byte
 	Signature     []byte
 	KeyID         string
-	Algorithm     signcrypto.Algorithm
-}
-
-func hashArtifact(path string) (int64, string, error) {
-	file, err := os.Open(path)
-	if err != nil {
-		return 0, "", err
-	}
-	defer file.Close()
-
-	hasher := sha256.New()
-	size, err := io.Copy(hasher, file)
-	if err != nil {
-		return 0, "", err
-	}
-	sha256Hex := hex.EncodeToString(hasher.Sum(nil))
-	return size, sha256Hex, nil
+	Algorithm     sigcrypto.Algorithm
 }
 
 func SignFile(artifactPath, pkg, version, keyPath, outPath string, force bool) (Result, error) {
-	if !manifest.ValidPackage(pkg) {
-		return Result{}, errors.New("invalid package name")
+	if err := fileio.RejectAliases(outPath, artifactPath, keyPath); err != nil {
+		return Result{}, err
 	}
-	if !force {
-		if _, err := os.Stat(outPath); err == nil {
-			return Result{}, errors.New("output file exists (use --force to overwrite)")
-		}
-	}
-	name := filepath.Base(artifactPath)
-
-	size, sha256Hex, err := hashArtifact(artifactPath)
+	f, err := fileio.OpenArtifact(artifactPath)
 	if err != nil {
 		return Result{}, err
 	}
+	defer f.Close()
+	size, hash, err := fileio.Hash(f)
+	if err != nil {
+		return Result{}, err
+	}
+	return signDigest(filepath.Base(artifactPath), size, hash, pkg, version, keyPath, outPath, force)
+}
 
+// SignBytes signs an in-memory snapshot. The caller supplies the logical basename
+// and guards aliases to any source files represented by these bytes.
+func SignBytes(data []byte, name, pkg, version, keyPath, outPath string, force bool) (Result, error) {
+	if err := fileio.RejectAliases(outPath, keyPath); err != nil {
+		return Result{}, err
+	}
+	hash := sha256.Sum256(data)
+	return signDigest(name, int64(len(data)), hex.EncodeToString(hash[:]), pkg, version, keyPath, outPath, force)
+}
+
+func signDigest(name string, size int64, hash, pkg, version, keyPath, outPath string, force bool) (Result, error) {
 	private, err := keys.LoadPrivate(keyPath)
 	if err != nil {
 		return Result{}, err
 	}
-	algo, err := signcrypto.PrivateAlgorithm(private)
+	signer, err := sigcrypto.NewSigner(private)
 	if err != nil {
 		return Result{}, err
 	}
-	keyID, err := keys.KeyIDFromPrivate(private)
+	id, err := keys.KeyIDFromPrivate(private)
 	if err != nil {
 		return Result{}, err
 	}
-
-	built, err := manifest.Build(pkg, version, algo, keyID, name, size, sha256Hex)
+	m, err := manifest.Build(pkg, version, signer.Algorithm(), id, name, size, hash)
 	if err != nil {
 		return Result{}, err
 	}
-	canonical, err := manifest.Canonical(built)
+	mb, err := manifest.Canonical(m)
 	if err != nil {
 		return Result{}, err
 	}
-
-	signer, err := signcrypto.NewSigner(private)
+	sig, err := signer.Sign(mb)
 	if err != nil {
 		return Result{}, err
 	}
-	signature, err := signer.Sign(canonical)
+	b, err := bundle.Build(mb, sig)
 	if err != nil {
 		return Result{}, err
 	}
-
-	bundleBytes, err := bundle.Build(canonical, signature)
-	if err != nil {
+	if err := fileio.WriteAtomic(outPath, b, 0644, force); err != nil {
 		return Result{}, err
 	}
-
-	if err := os.WriteFile(outPath, bundleBytes, 0o644); err != nil {
-		return Result{}, err
-	}
-
-	return Result{
-		BundlePath:    outPath,
-		Manifest:      built,
-		ManifestBytes: canonical,
-		Signature:     signature,
-		KeyID:         keyID,
-		Algorithm:     algo,
-	}, nil
+	return Result{outPath, m, mb, sig, id, signer.Algorithm()}, nil
 }

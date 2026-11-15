@@ -1,18 +1,21 @@
 package verifier
 
 import (
-	"crypto/sha256"
-	"encoding/hex"
-	"io"
+	"fmt"
 	"os"
 	"path/filepath"
+	"slices"
 
 	"signer/internal/bundle"
+	"signer/internal/contract"
 	sigcrypto "signer/internal/crypto"
+	"signer/internal/fileio"
 	"signer/internal/keys"
 	"signer/internal/manifest"
 	"signer/internal/trust"
 )
+
+var ErrNotImplemented = contract.ErrNotImplemented
 
 type Status string
 
@@ -36,14 +39,19 @@ type Request struct {
 }
 
 type Result struct {
-	Valid     bool    `json:"valid"`
-	Status    string  `json:"status"`
-	Message   string  `json:"message"`
-	Algorithm *string `json:"algorithm"`
-	KeyID     *string `json:"keyid"`
-	Package   *string `json:"package"`
-	Version   *string `json:"version"`
+	artifactSHA256 string
+	Valid          bool    `json:"valid"`
+	Status         string  `json:"status"`
+	Message        string  `json:"message"`
+	Algorithm      *string `json:"algorithm"`
+	KeyID          *string `json:"keyid"`
+	Package        *string `json:"package"`
+	Version        *string `json:"version"`
 }
+
+// ArtifactSHA256 returns the digest read during successful verification. It is
+// empty for rejected inputs and is excluded from the mandatory JSON interface.
+func (r Result) ArtifactSHA256() string { return r.artifactSHA256 }
 
 func (r Result) ExitCode() int {
 	switch r.Status {
@@ -56,103 +64,76 @@ func (r Result) ExitCode() int {
 	}
 }
 
-func resultOut(status Status, message string, m *manifest.Manifest) Result {
-	result := Result{Valid: status == StatusOK, Status: string(status), Message: message}
-	if m != nil {
-		result.Algorithm = &m.Algorithm
-		result.KeyID = &m.KeyID
-		result.Package = &m.Package
-		result.Version = &m.Version
-	}
-	return result
-}
-
 func Run(request Request) (Result, error) {
-	artifact, err := os.Open(request.ArtifactPath)
+	r := Result{}
+	fail := func(status Status, err any) (Result, error) {
+		r.Status = string(status)
+		r.Message = fmt.Sprint(err)
+		return r, nil
+	}
+	if !manifest.ValidPackage(request.Package) || !manifest.ValidVersion(request.Version) {
+		return fail(StatusInputError, "invalid expected package or version")
+	}
+	a, err := fileio.OpenArtifact(request.ArtifactPath)
 	if err != nil {
-		return resultOut(StatusInputError, "cannot read artifact", nil), nil
+		return fail(StatusInputError, err)
 	}
-	defer artifact.Close()
-
-	// INPUT_ERROR
-	hasher := sha256.New()
-	artifactSize, err := io.Copy(hasher, artifact)
+	defer a.Close()
+	size, hash, err := fileio.Hash(a)
 	if err != nil {
-		return resultOut(StatusInputError, "cannot read artifact", nil), nil
+		return fail(StatusInputError, err)
 	}
-	artifactSHA256 := hex.EncodeToString(hasher.Sum(nil))
-
-	bundleBytes, err := os.ReadFile(request.BundlePath)
+	b, err := fileio.ReadLimit(request.BundlePath, bundle.MaxSize)
 	if err != nil {
-		return resultOut(StatusInputError, "cannot read bundle", nil), nil
+		return fail(StatusInputError, err)
 	}
-	trustBytes, err := os.ReadFile(request.TrustStorePath)
+	t, err := os.ReadFile(request.TrustStorePath)
 	if err != nil {
-		return resultOut(StatusInputError, "cannot read trust store", nil), nil
+		return fail(StatusInputError, err)
 	}
-
-	// FORMAT_ERROR
-	parsedBundle, err := bundle.Parse(bundleBytes)
+	parsed, err := bundle.Parse(b)
 	if err != nil {
-		return resultOut(StatusFormatError, "invalid bundle", nil), nil
+		return fail(StatusFormatError, err)
 	}
-	m, err := manifest.Parse(parsedBundle.Manifest)
+	m, err := manifest.Parse(parsed.Manifest)
 	if err != nil {
-		return resultOut(StatusFormatError, "invalid manifest", nil), nil
+		return fail(StatusFormatError, err)
 	}
-	store, err := trust.Parse(trustBytes)
+	r.Algorithm = &m.Algorithm
+	r.KeyID = &m.KeyID
+	r.Package = &m.Package
+	r.Version = &m.Version
+	s, err := trust.Parse(t)
 	if err != nil {
-		return resultOut(StatusFormatError, "invalid trust store", nil), nil
+		return fail(StatusFormatError, err)
 	}
-
-	// UNSUPPORTED_ALGORITHM
-	if err := manifest.ValidateAlgorithm(m.Algorithm); err != nil {
-		return resultOut(StatusUnsupportedAlgorithm, "unsupported algorithm", &m), nil
+	if !sigcrypto.Known(sigcrypto.Algorithm(m.Algorithm)) {
+		return fail(StatusUnsupportedAlgorithm, "unsupported algorithm")
 	}
-
-	// KEY_NOT_TRUSTED
-	entry, found := trust.Find(store, m.KeyID)
-	if !found {
-		return resultOut(StatusKeyNotTrusted, "keyid not in trust store", &m), nil
+	e, ok := trust.Find(s, m.KeyID)
+	if !ok || e.Algorithm != m.Algorithm || !slices.Contains(e.Packages, request.Package) {
+		return fail(StatusKeyNotTrusted, "key is not trusted for the expected package and profile")
 	}
-	if err := entry.Validate(); err != nil {
-		return resultOut(StatusFormatError, "invalid trust entry", &m), nil
-	}
-	if entry.Algorithm != m.Algorithm {
-		return resultOut(StatusKeyNotTrusted, "trust entry algorithm mismatch", &m), nil
-	}
-	allowed := false
-	for _, pkg := range entry.Packages {
-		if pkg == request.Package {
-			allowed = true
-		}
-	}
-	if !allowed {
-		return resultOut(StatusKeyNotTrusted, "key not allowed for package", &m), nil
-	}
-	publicKey, err := keys.ParsePublic([]byte(entry.PublicKeyPEM))
+	pub, err := keys.ParsePublic([]byte(e.PublicKeyPEM))
 	if err != nil {
-		return resultOut(StatusFormatError, "invalid entry public key", &m), nil
+		return fail(StatusFormatError, err)
 	}
-	cryptoVerifier, err := sigcrypto.NewVerifier(publicKey)
+	v, err := sigcrypto.NewVerifier(pub)
 	if err != nil {
-		return resultOut(StatusFormatError, "entry key does not match a known profile", &m), nil
+		return fail(StatusFormatError, err)
 	}
-
-	// INVALID_SIGNATURE
-	if err := cryptoVerifier.Verify(parsedBundle.Manifest, parsedBundle.Signature); err != nil {
-		return resultOut(StatusInvalidSignature, "invalid signature", &m), nil
+	if err := v.Verify(parsed.Manifest, parsed.Signature); err != nil {
+		return fail(StatusInvalidSignature, err)
 	}
-
-	// METADATA_MISMATCH
 	if m.Package != request.Package || m.Version != request.Version || m.Artifact.Name != filepath.Base(request.ArtifactPath) {
-		return resultOut(StatusMetadataMismatch, "package, version, or artifact name mismatch", &m), nil
+		return fail(StatusMetadataMismatch, "package, version, or artifact basename differs")
 	}
-
-	// ARTIFACT_MISMATCH
-	if m.Artifact.Size != artifactSize || m.Artifact.SHA256 != artifactSHA256 {
-		return resultOut(StatusArtifactMismatch, "artifact size or sha256 mismatch", &m), nil
+	if size != m.Artifact.Size || hash != m.Artifact.SHA256 {
+		return fail(StatusArtifactMismatch, "artifact size or SHA-256 differs")
 	}
-
-	return resultOut(StatusOK, "verification successful", &m), nil
+	r.Valid = true
+	r.artifactSHA256 = hash
+	r.Status = string(StatusOK)
+	r.Message = "signature and artifact are valid"
+	return r, nil
 }
