@@ -6,4 +6,3 @@ consumer-results/
 __pycache__/
 ci/keys/consumer.key.pem
 /*.key.pem
-/*.pdf
